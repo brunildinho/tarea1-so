@@ -4,5 +4,22 @@ afectabastanteeltiempoderespuestadelatareaT1?
 
 Porque el modo Time Sharing reduce el tiempo ocioso del procesador, al requisarlo cuando una tarea debe hacer una I/O o cuando la tarea excede un quantum de tiempo. Si esto ocurre, el procesador es asignado a la siguiente tarea lista. Esto optimiza el uso del procesador y reduce los tiempos ociosos pues el procesador no debe esperar a que una tarea termine su I/O para volver a mantenerse ocupado.
 
+2.2
+Proponer un ejemplo de archivo de definición de tareas, con 3 tareas en total,
+donde la ejecución en modo Batch y Time Sharing produce el mismo tiempo
+de respuesta para todas las tareas. ¿Explicar por qué?
 
+Asignando un quantum de 10 y siendo la duración de cada tarea y su tiempo de llegada multiplos del quantum, el modo batch processing y time sharing son equivalentes si una tarea entra en el mismo instante en que otra termina.
 
+2.5
+
+La función implementa el mecanismo de elección de la siguiente tarea. Elige de la cola de ejecución la próxima tarea que el procesador ejecutará
+
+2.6
+
+El código implementa el algoritmo de Round Robin, pues símplemente itera sobre la cola de ejecución (desde la tarea ya en ejecución o desde el inicio si no hay) hasta encontrar una tarea lista, en cuyo caso cambia su estado a "running" y devuelve su índice. Si no encuentra ninguna, devuelve -2. Si no hay más tareas para revisar (wait = 0 pero no encontró ninguna tarea lista) devuelve -1.
+
+2.7
+
+Si se quiere implementar un algoritmo con prioridades tipo Multi Level Queues, el algoritmo tendría que manejar varias colas que representarían los distintos niveles de prioridad. Se debe implementar la elección de la cola a ejecutar según las reglas del MLQ, y una vez elegida la cola se procedería a elegir la tarea de forma similar a la ya implementada.
+De elegir otro algoritmo que requiera cálculo de prioridades, el algoritmo debe considerar el peso de cada tarea y el cálculo del peso, recorriendo la cola calculando los pesos y eligiendo el que resulte tener el mayor.

@@ -1,0 +1,137 @@
+\hypertarget{main_8c}{\section{main.\-c File Reference}
+\label{main_8c}\index{main.\-c@{main.\-c}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}tasks.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}time.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sched.\-h\char`\"{}}\\*
+Include dependency graph for main.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{main_8c_a1c6d5de492ac61ad29aec7aa9a436bbf}{V\-E\-R\-S\-I\-O\-N}~\char`\"{}1.\-1\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tasks_8h_a160cc545e04818fb9e5b120d405ad348}{task\-\_\-t} \hyperlink{main_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}
+\begin{DoxyCompactList}\small\item\em The set of tasks. \end{DoxyCompactList}\item 
+unsigned \hyperlink{main_8c_a8debcb15087bba75ef635b1b4fe6cb25}{quantum}
+\begin{DoxyCompactList}\small\item\em The time slice used for time sharing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{main_8c_a1c6d5de492ac61ad29aec7aa9a436bbf}{\index{main.\-c@{main.\-c}!V\-E\-R\-S\-I\-O\-N@{V\-E\-R\-S\-I\-O\-N}}
+\index{V\-E\-R\-S\-I\-O\-N@{V\-E\-R\-S\-I\-O\-N}!main.c@{main.\-c}}
+\subsubsection[{V\-E\-R\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-E\-R\-S\-I\-O\-N~\char`\"{}1.\-1\char`\"{}}}\label{main_8c_a1c6d5de492ac61ad29aec7aa9a436bbf}
+
+
+Definition at line 12 of file main.\-c.
+
+
+
+Referenced by main().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{\index{main.\-c@{main.\-c}!main@{main}}
+\index{main@{main}!main.c@{main.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{main_8c_a0ddf1224851353fc92bfbff6f499fa97}
+
+
+Definition at line 17 of file main.\-c.
+
+
+
+References Display\-Stats(), Display\-Tasks(), quantum, Read\-Tasks(), Run\-Batch(), Run\-Time\-Share(), and V\-E\-R\-S\-I\-O\-N.
+
+
+\begin{DoxyCode}
+18 \{
+19     \textcolor{keywordtype}{unsigned} n;
+20     \textcolor{keywordtype}{unsigned} runmode;
+21     \textcolor{keywordtype}{unsigned} time;
+22     \textcolor{keywordtype}{unsigned} idle=0;
+23 
+24     printf(\textcolor{stringliteral}{"Tasks simulator v%s: "}, \hyperlink{main_8c_a1c6d5de492ac61ad29aec7aa9a436bbf}{VERSION});
+25 
+26     runmode = atoi(argv[1]);
+27     \textcolor{keywordflow}{switch} (runmode)
+28     \{
+29     \textcolor{keywordflow}{case} 1:
+30       printf(\textcolor{stringliteral}{"BATCH PROCESSING\(\backslash\)n\(\backslash\)n"});
+31       n = \hyperlink{tasks_8c_a23a2311e9f86bf69c6f5a693515b465b}{ReadTasks}(argv[2]);               \textcolor{comment}{// Read task file}
+32       \hyperlink{tasks_8c_a4900ca33f6181c8ca0640197cb9f0eca}{DisplayTasks}(\hyperlink{main_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}, n);               \textcolor{comment}{// Display available tasks}
+33       time = \hyperlink{sched_8c_ab59478d53f56baaa39228d19f22dccf4}{RunBatch}(\hyperlink{main_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}, n, &idle);     \textcolor{comment}{// Run task in batch processing}
+34       \textcolor{keywordflow}{break};
+35     \textcolor{keywordflow}{case} 2:
+36       printf(\textcolor{stringliteral}{"TIME SHARING\(\backslash\)n\(\backslash\)n"});
+37       \hyperlink{main_8c_a8debcb15087bba75ef635b1b4fe6cb25}{quantum} = atoi(argv[2]);
+38       n = \hyperlink{tasks_8c_a23a2311e9f86bf69c6f5a693515b465b}{ReadTasks}(argv[3]);
+39       \hyperlink{tasks_8c_a4900ca33f6181c8ca0640197cb9f0eca}{DisplayTasks}(\hyperlink{main_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}, n);
+40       time = \hyperlink{sched_8c_ae3fa69f68cb26518aa65e34962cb64a2}{RunTimeShare}(\hyperlink{main_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks},\hyperlink{main_8c_a8debcb15087bba75ef635b1b4fe6cb25}{quantum},n, &idle);          \textcolor{comment}{// Run tasks in time
+       sharing}
+41       \textcolor{keywordflow}{break};
+42     \}
+43     \hyperlink{time_8c_abdbf312dc4f12282fcdc885e30c35d8d}{DisplayStats}(\hyperlink{main_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}, n, time, idle);       \textcolor{comment}{// Display tasks statistics after execution}
+44     \textcolor{keywordflow}{return}(0);
+45 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{main_8c_a8debcb15087bba75ef635b1b4fe6cb25}{\index{main.\-c@{main.\-c}!quantum@{quantum}}
+\index{quantum@{quantum}!main.c@{main.\-c}}
+\subsubsection[{quantum}]{\setlength{\rightskip}{0pt plus 5cm}unsigned quantum}}\label{main_8c_a8debcb15087bba75ef635b1b4fe6cb25}
+
+
+The time slice used for time sharing. 
+
+
+
+Definition at line 10 of file time.\-c.
+
+
+
+Referenced by main().
+
+\hypertarget{main_8c_ad3af5d835e26282dfd09b0c77f1407e6}{\index{main.\-c@{main.\-c}!tasks@{tasks}}
+\index{tasks@{tasks}!main.c@{main.\-c}}
+\subsubsection[{tasks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf task\-\_\-t} tasks}}\label{main_8c_ad3af5d835e26282dfd09b0c77f1407e6}
+
+
+The set of tasks. 
+
+
+
+Definition at line 16 of file tasks.\-c.
+

@@ -1,0 +1,8 @@
+<map id="RunCPU" name="RunCPU">
+<area shape="rect" id="node2" href="$sched_8c.html#a2f82e63c1372cfb979c12a137581a387" title="Choose next task in batch processing &#160;The next task in ready state in chosen. " alt="" coords="143,5,251,32"/>
+<area shape="rect" id="node3" href="$tasks_8c.html#ab267eafee47a5827fd95ba3e187ab676" title="Checks for new tasks arrival. Tasks have a start time Put all the new tasks in ready state..." alt="" coords="134,56,261,83"/>
+<area shape="rect" id="node4" href="$sched_8c.html#a58c22f0015b83ad8bb36ad118ed13c82" title="Runs the tasks list in batch processing &#160;Each task is terminated before running the next one..." alt="" coords="157,107,237,133"/>
+<area shape="rect" id="node5" href="$sched_8c.html#a806cc3b9051410b0cff9fc6713c0b9c8" title="Runs the tasks in time sharing. The function is called a each CPU cycle &#160;. " alt="" coords="143,157,252,184"/>
+<area shape="rect" id="node6" href="$sched_8c.html#a865e8ede1588c6dc9a0bb62dbcf8f5ab" title="Chose next task to execute (shechdule) in time sharing. &#160;Uses a simple Round Robin policy without pre..." alt="" coords="129,208,266,235"/>
+<area shape="rect" id="node7" href="$tasks_8c.html#a7234f1b88d6f1f454ce4a4388cb148e4" title="Update task statistics and IOs at each CPU cycle Update the elapsed time of blocked and ready tasks..." alt="" coords="147,259,247,285"/>
+</map>

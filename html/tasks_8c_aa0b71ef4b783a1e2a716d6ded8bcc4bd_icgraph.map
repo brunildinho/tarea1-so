@@ -1,0 +1,5 @@
+<map id="CheckTaskReady" name="CheckTaskReady">
+<area shape="rect" id="node2" href="$sched_8h.html#ab59478d53f56baaa39228d19f22dccf4" title="Runs the tasks list in batch processing &#160;Each task is terminated before running the next one..." alt="" coords="196,5,276,32"/>
+<area shape="rect" id="node4" href="$sched_8h.html#ae3fa69f68cb26518aa65e34962cb64a2" title="Runs the tasks in time sharing. The function is called a each CPU cycle &#160;. " alt="" coords="181,56,291,83"/>
+<area shape="rect" id="node3" href="$main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="339,31,389,57"/>
+</map>

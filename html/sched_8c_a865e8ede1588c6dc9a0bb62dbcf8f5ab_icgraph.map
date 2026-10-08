@@ -1,0 +1,4 @@
+<map id="TimeShareResched" name="TimeShareResched">
+<area shape="rect" id="node2" href="$sched_8h.html#ae3fa69f68cb26518aa65e34962cb64a2" title="Runs the tasks in time sharing. The function is called a each CPU cycle &#160;. " alt="" coords="192,5,301,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="349,5,400,32"/>
+</map>

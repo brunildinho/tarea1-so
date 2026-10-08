@@ -1,0 +1,117 @@
+\indexentry{run\discretionary {-}{}{}\_\discretionary {-}{}{}s@{run\discretionary {-}{}{}\_\discretionary {-}{}{}s}|hyperpage}{7}
+\indexentry{run\discretionary {-}{}{}\_\discretionary {-}{}{}s@{run\discretionary {-}{}{}\_\discretionary {-}{}{}s}!io@{io}|hyperpage}{7}
+\indexentry{io@{io}!run_s@{run\discretionary {-}{}{}\_\discretionary {-}{}{}s}|hyperpage}{7}
+\indexentry{run\discretionary {-}{}{}\_\discretionary {-}{}{}s@{run\discretionary {-}{}{}\_\discretionary {-}{}{}s}!run@{run}|hyperpage}{7}
+\indexentry{run@{run}!run_s@{run\discretionary {-}{}{}\_\discretionary {-}{}{}s}|hyperpage}{7}
+\indexentry{task\discretionary {-}{}{}\_\discretionary {-}{}{}s@{task\discretionary {-}{}{}\_\discretionary {-}{}{}s}|hyperpage}{8}
+\indexentry{ready@{ready}!task\-\_\-s@{task\-\_\-s}|hyperpage}{9}
+\indexentry{task\-\_\-s@{task\-\_\-s}!ready@{ready}|hyperpage}{9}
+\indexentry{blocked@{blocked}!task\-\_\-s@{task\-\_\-s}|hyperpage}{9}
+\indexentry{task\-\_\-s@{task\-\_\-s}!blocked@{blocked}|hyperpage}{9}
+\indexentry{terminated@{terminated}!task\-\_\-s@{task\-\_\-s}|hyperpage}{9}
+\indexentry{task\-\_\-s@{task\-\_\-s}!terminated@{terminated}|hyperpage}{9}
+\indexentry{notready@{notready}!task\-\_\-s@{task\-\_\-s}|hyperpage}{9}
+\indexentry{task\-\_\-s@{task\-\_\-s}!notready@{notready}|hyperpage}{9}
+\indexentry{running@{running}!task\-\_\-s@{task\-\_\-s}|hyperpage}{9}
+\indexentry{task\-\_\-s@{task\-\_\-s}!running@{running}|hyperpage}{9}
+\indexentry{task\discretionary {-}{}{}\_\discretionary {-}{}{}s@{task\discretionary {-}{}{}\_\discretionary {-}{}{}s}!duration@{duration}|hyperpage}{9}
+\indexentry{duration@{duration}!task_s@{task\discretionary {-}{}{}\_\discretionary {-}{}{}s}|hyperpage}{9}
+\indexentry{task\discretionary {-}{}{}\_\discretionary {-}{}{}s@{task\discretionary {-}{}{}\_\discretionary {-}{}{}s}!index@{index}|hyperpage}{9}
+\indexentry{index@{index}!task_s@{task\discretionary {-}{}{}\_\discretionary {-}{}{}s}|hyperpage}{9}
+\indexentry{task\discretionary {-}{}{}\_\discretionary {-}{}{}s@{task\discretionary {-}{}{}\_\discretionary {-}{}{}s}!io\discretionary {-}{}{}\_\discretionary {-}{}{}time@{io\discretionary {-}{}{}\_\discretionary {-}{}{}time}|hyperpage}{9}
+\indexentry{io\discretionary {-}{}{}\_\discretionary {-}{}{}time@{io\discretionary {-}{}{}\_\discretionary {-}{}{}time}!task_s@{task\discretionary {-}{}{}\_\discretionary {-}{}{}s}|hyperpage}{9}
+\indexentry{task\discretionary {-}{}{}\_\discretionary {-}{}{}s@{task\discretionary {-}{}{}\_\discretionary {-}{}{}s}!nruns@{nruns}|hyperpage}{9}
+\indexentry{nruns@{nruns}!task_s@{task\discretionary {-}{}{}\_\discretionary {-}{}{}s}|hyperpage}{9}
+\indexentry{task\discretionary {-}{}{}\_\discretionary {-}{}{}s@{task\discretionary {-}{}{}\_\discretionary {-}{}{}s}!rtime@{rtime}|hyperpage}{9}
+\indexentry{rtime@{rtime}!task_s@{task\discretionary {-}{}{}\_\discretionary {-}{}{}s}|hyperpage}{9}
+\indexentry{task\discretionary {-}{}{}\_\discretionary {-}{}{}s@{task\discretionary {-}{}{}\_\discretionary {-}{}{}s}!run@{run}|hyperpage}{9}
+\indexentry{run@{run}!task_s@{task\discretionary {-}{}{}\_\discretionary {-}{}{}s}|hyperpage}{9}
+\indexentry{task\discretionary {-}{}{}\_\discretionary {-}{}{}s@{task\discretionary {-}{}{}\_\discretionary {-}{}{}s}!start@{start}|hyperpage}{10}
+\indexentry{start@{start}!task_s@{task\discretionary {-}{}{}\_\discretionary {-}{}{}s}|hyperpage}{10}
+\indexentry{task\discretionary {-}{}{}\_\discretionary {-}{}{}s@{task\discretionary {-}{}{}\_\discretionary {-}{}{}s}!state@{state}|hyperpage}{10}
+\indexentry{state@{state}!task_s@{task\discretionary {-}{}{}\_\discretionary {-}{}{}s}|hyperpage}{10}
+\indexentry{task\discretionary {-}{}{}\_\discretionary {-}{}{}s@{task\discretionary {-}{}{}\_\discretionary {-}{}{}s}!utime@{utime}|hyperpage}{10}
+\indexentry{utime@{utime}!task_s@{task\discretionary {-}{}{}\_\discretionary {-}{}{}s}|hyperpage}{10}
+\indexentry{main.\discretionary {-}{}{}c@{main.\discretionary {-}{}{}c}|hyperpage}{11}
+\indexentry{main.\discretionary {-}{}{}c@{main.\discretionary {-}{}{}c}!V\discretionary {-}{}{}E\discretionary {-}{}{}R\discretionary {-}{}{}S\discretionary {-}{}{}I\discretionary {-}{}{}O\discretionary {-}{}{}N@{V\discretionary {-}{}{}E\discretionary {-}{}{}R\discretionary {-}{}{}S\discretionary {-}{}{}I\discretionary {-}{}{}O\discretionary {-}{}{}N}|hyperpage}{12}
+\indexentry{V\discretionary {-}{}{}E\discretionary {-}{}{}R\discretionary {-}{}{}S\discretionary {-}{}{}I\discretionary {-}{}{}O\discretionary {-}{}{}N@{V\discretionary {-}{}{}E\discretionary {-}{}{}R\discretionary {-}{}{}S\discretionary {-}{}{}I\discretionary {-}{}{}O\discretionary {-}{}{}N}!main.c@{main.\discretionary {-}{}{}c}|hyperpage}{12}
+\indexentry{main.\discretionary {-}{}{}c@{main.\discretionary {-}{}{}c}!main@{main}|hyperpage}{12}
+\indexentry{main@{main}!main.c@{main.\discretionary {-}{}{}c}|hyperpage}{12}
+\indexentry{main.\discretionary {-}{}{}c@{main.\discretionary {-}{}{}c}!quantum@{quantum}|hyperpage}{13}
+\indexentry{quantum@{quantum}!main.c@{main.\discretionary {-}{}{}c}|hyperpage}{13}
+\indexentry{main.\discretionary {-}{}{}c@{main.\discretionary {-}{}{}c}!tasks@{tasks}|hyperpage}{13}
+\indexentry{tasks@{tasks}!main.c@{main.\discretionary {-}{}{}c}|hyperpage}{13}
+\indexentry{sched.\discretionary {-}{}{}c@{sched.\discretionary {-}{}{}c}|hyperpage}{13}
+\indexentry{sched.\discretionary {-}{}{}c@{sched.\discretionary {-}{}{}c}!Batch\discretionary {-}{}{}Resched@{Batch\discretionary {-}{}{}Resched}|hyperpage}{14}
+\indexentry{Batch\discretionary {-}{}{}Resched@{Batch\discretionary {-}{}{}Resched}!sched.c@{sched.\discretionary {-}{}{}c}|hyperpage}{14}
+\indexentry{sched.\discretionary {-}{}{}c@{sched.\discretionary {-}{}{}c}!Run\discretionary {-}{}{}Batch@{Run\discretionary {-}{}{}Batch}|hyperpage}{15}
+\indexentry{Run\discretionary {-}{}{}Batch@{Run\discretionary {-}{}{}Batch}!sched.c@{sched.\discretionary {-}{}{}c}|hyperpage}{15}
+\indexentry{sched.\discretionary {-}{}{}c@{sched.\discretionary {-}{}{}c}!Run\discretionary {-}{}{}Time\discretionary {-}{}{}Share@{Run\discretionary {-}{}{}Time\discretionary {-}{}{}Share}|hyperpage}{17}
+\indexentry{Run\discretionary {-}{}{}Time\discretionary {-}{}{}Share@{Run\discretionary {-}{}{}Time\discretionary {-}{}{}Share}!sched.c@{sched.\discretionary {-}{}{}c}|hyperpage}{17}
+\indexentry{sched.\discretionary {-}{}{}c@{sched.\discretionary {-}{}{}c}!Time\discretionary {-}{}{}Share\discretionary {-}{}{}Resched@{Time\discretionary {-}{}{}Share\discretionary {-}{}{}Resched}|hyperpage}{19}
+\indexentry{Time\discretionary {-}{}{}Share\discretionary {-}{}{}Resched@{Time\discretionary {-}{}{}Share\discretionary {-}{}{}Resched}!sched.c@{sched.\discretionary {-}{}{}c}|hyperpage}{19}
+\indexentry{sched.\discretionary {-}{}{}h@{sched.\discretionary {-}{}{}h}|hyperpage}{20}
+\indexentry{sched.\discretionary {-}{}{}h@{sched.\discretionary {-}{}{}h}!Batch\discretionary {-}{}{}Resched@{Batch\discretionary {-}{}{}Resched}|hyperpage}{20}
+\indexentry{Batch\discretionary {-}{}{}Resched@{Batch\discretionary {-}{}{}Resched}!sched.h@{sched.\discretionary {-}{}{}h}|hyperpage}{20}
+\indexentry{sched.\discretionary {-}{}{}h@{sched.\discretionary {-}{}{}h}!Run\discretionary {-}{}{}Batch@{Run\discretionary {-}{}{}Batch}|hyperpage}{21}
+\indexentry{Run\discretionary {-}{}{}Batch@{Run\discretionary {-}{}{}Batch}!sched.h@{sched.\discretionary {-}{}{}h}|hyperpage}{21}
+\indexentry{sched.\discretionary {-}{}{}h@{sched.\discretionary {-}{}{}h}!Run\discretionary {-}{}{}Time\discretionary {-}{}{}Share@{Run\discretionary {-}{}{}Time\discretionary {-}{}{}Share}|hyperpage}{23}
+\indexentry{Run\discretionary {-}{}{}Time\discretionary {-}{}{}Share@{Run\discretionary {-}{}{}Time\discretionary {-}{}{}Share}!sched.h@{sched.\discretionary {-}{}{}h}|hyperpage}{23}
+\indexentry{sched.\discretionary {-}{}{}h@{sched.\discretionary {-}{}{}h}!Time\discretionary {-}{}{}Share\discretionary {-}{}{}Resched@{Time\discretionary {-}{}{}Share\discretionary {-}{}{}Resched}|hyperpage}{25}
+\indexentry{Time\discretionary {-}{}{}Share\discretionary {-}{}{}Resched@{Time\discretionary {-}{}{}Share\discretionary {-}{}{}Resched}!sched.h@{sched.\discretionary {-}{}{}h}|hyperpage}{25}
+\indexentry{tasks.\discretionary {-}{}{}c@{tasks.\discretionary {-}{}{}c}|hyperpage}{26}
+\indexentry{tasks.\discretionary {-}{}{}c@{tasks.\discretionary {-}{}{}c}!T\discretionary {-}{}{}A\discretionary {-}{}{}S\discretionary {-}{}{}K\discretionary {-}{}{}S\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}C@{T\discretionary {-}{}{}A\discretionary {-}{}{}S\discretionary {-}{}{}K\discretionary {-}{}{}S\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}C}|hyperpage}{27}
+\indexentry{T\discretionary {-}{}{}A\discretionary {-}{}{}S\discretionary {-}{}{}K\discretionary {-}{}{}S\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}C@{T\discretionary {-}{}{}A\discretionary {-}{}{}S\discretionary {-}{}{}K\discretionary {-}{}{}S\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}C}!tasks.c@{tasks.\discretionary {-}{}{}c}|hyperpage}{27}
+\indexentry{tasks.\discretionary {-}{}{}c@{tasks.\discretionary {-}{}{}c}!Check\discretionary {-}{}{}Task\discretionary {-}{}{}Ready@{Check\discretionary {-}{}{}Task\discretionary {-}{}{}Ready}|hyperpage}{27}
+\indexentry{Check\discretionary {-}{}{}Task\discretionary {-}{}{}Ready@{Check\discretionary {-}{}{}Task\discretionary {-}{}{}Ready}!tasks.c@{tasks.\discretionary {-}{}{}c}|hyperpage}{27}
+\indexentry{tasks.\discretionary {-}{}{}c@{tasks.\discretionary {-}{}{}c}!Display\discretionary {-}{}{}Tasks@{Display\discretionary {-}{}{}Tasks}|hyperpage}{28}
+\indexentry{Display\discretionary {-}{}{}Tasks@{Display\discretionary {-}{}{}Tasks}!tasks.c@{tasks.\discretionary {-}{}{}c}|hyperpage}{28}
+\indexentry{tasks.\discretionary {-}{}{}c@{tasks.\discretionary {-}{}{}c}!Read\discretionary {-}{}{}Tasks@{Read\discretionary {-}{}{}Tasks}|hyperpage}{28}
+\indexentry{Read\discretionary {-}{}{}Tasks@{Read\discretionary {-}{}{}Tasks}!tasks.c@{tasks.\discretionary {-}{}{}c}|hyperpage}{28}
+\indexentry{tasks.\discretionary {-}{}{}c@{tasks.\discretionary {-}{}{}c}!Still\discretionary {-}{}{}Have\discretionary {-}{}{}Tasks@{Still\discretionary {-}{}{}Have\discretionary {-}{}{}Tasks}|hyperpage}{30}
+\indexentry{Still\discretionary {-}{}{}Have\discretionary {-}{}{}Tasks@{Still\discretionary {-}{}{}Have\discretionary {-}{}{}Tasks}!tasks.c@{tasks.\discretionary {-}{}{}c}|hyperpage}{30}
+\indexentry{tasks.\discretionary {-}{}{}c@{tasks.\discretionary {-}{}{}c}!Update\discretionary {-}{}{}Tasks@{Update\discretionary {-}{}{}Tasks}|hyperpage}{31}
+\indexentry{Update\discretionary {-}{}{}Tasks@{Update\discretionary {-}{}{}Tasks}!tasks.c@{tasks.\discretionary {-}{}{}c}|hyperpage}{31}
+\indexentry{tasks.\discretionary {-}{}{}c@{tasks.\discretionary {-}{}{}c}!ntasks@{ntasks}|hyperpage}{32}
+\indexentry{ntasks@{ntasks}!tasks.c@{tasks.\discretionary {-}{}{}c}|hyperpage}{32}
+\indexentry{tasks.\discretionary {-}{}{}c@{tasks.\discretionary {-}{}{}c}!tasks@{tasks}|hyperpage}{32}
+\indexentry{tasks@{tasks}!tasks.c@{tasks.\discretionary {-}{}{}c}|hyperpage}{32}
+\indexentry{tasks.\discretionary {-}{}{}h@{tasks.\discretionary {-}{}{}h}|hyperpage}{32}
+\indexentry{tasks.\discretionary {-}{}{}h@{tasks.\discretionary {-}{}{}h}!run\discretionary {-}{}{}\_\discretionary {-}{}{}t@{run\discretionary {-}{}{}\_\discretionary {-}{}{}t}|hyperpage}{33}
+\indexentry{run\discretionary {-}{}{}\_\discretionary {-}{}{}t@{run\discretionary {-}{}{}\_\discretionary {-}{}{}t}!tasks.h@{tasks.\discretionary {-}{}{}h}|hyperpage}{33}
+\indexentry{tasks.\discretionary {-}{}{}h@{tasks.\discretionary {-}{}{}h}!task\discretionary {-}{}{}\_\discretionary {-}{}{}t@{task\discretionary {-}{}{}\_\discretionary {-}{}{}t}|hyperpage}{33}
+\indexentry{task\discretionary {-}{}{}\_\discretionary {-}{}{}t@{task\discretionary {-}{}{}\_\discretionary {-}{}{}t}!tasks.h@{tasks.\discretionary {-}{}{}h}|hyperpage}{33}
+\indexentry{tasks.\discretionary {-}{}{}h@{tasks.\discretionary {-}{}{}h}!sched\discretionary {-}{}{}\_\discretionary {-}{}{}t@{sched\discretionary {-}{}{}\_\discretionary {-}{}{}t}|hyperpage}{33}
+\indexentry{sched\discretionary {-}{}{}\_\discretionary {-}{}{}t@{sched\discretionary {-}{}{}\_\discretionary {-}{}{}t}!tasks.h@{tasks.\discretionary {-}{}{}h}|hyperpage}{33}
+\indexentry{batch@{batch}!tasks.\-h@{tasks.\-h}|hyperpage}{33}
+\indexentry{tasks.\-h@{tasks.\-h}!batch@{batch}|hyperpage}{33}
+\indexentry{timeshare@{timeshare}!tasks.\-h@{tasks.\-h}|hyperpage}{33}
+\indexentry{tasks.\-h@{tasks.\-h}!timeshare@{timeshare}|hyperpage}{33}
+\indexentry{tasks.\discretionary {-}{}{}h@{tasks.\discretionary {-}{}{}h}!Check\discretionary {-}{}{}Task\discretionary {-}{}{}Ready@{Check\discretionary {-}{}{}Task\discretionary {-}{}{}Ready}|hyperpage}{33}
+\indexentry{Check\discretionary {-}{}{}Task\discretionary {-}{}{}Ready@{Check\discretionary {-}{}{}Task\discretionary {-}{}{}Ready}!tasks.h@{tasks.\discretionary {-}{}{}h}|hyperpage}{33}
+\indexentry{tasks.\discretionary {-}{}{}h@{tasks.\discretionary {-}{}{}h}!Display\discretionary {-}{}{}Tasks@{Display\discretionary {-}{}{}Tasks}|hyperpage}{34}
+\indexentry{Display\discretionary {-}{}{}Tasks@{Display\discretionary {-}{}{}Tasks}!tasks.h@{tasks.\discretionary {-}{}{}h}|hyperpage}{34}
+\indexentry{tasks.\discretionary {-}{}{}h@{tasks.\discretionary {-}{}{}h}!Read\discretionary {-}{}{}Tasks@{Read\discretionary {-}{}{}Tasks}|hyperpage}{35}
+\indexentry{Read\discretionary {-}{}{}Tasks@{Read\discretionary {-}{}{}Tasks}!tasks.h@{tasks.\discretionary {-}{}{}h}|hyperpage}{35}
+\indexentry{tasks.\discretionary {-}{}{}h@{tasks.\discretionary {-}{}{}h}!Still\discretionary {-}{}{}Have\discretionary {-}{}{}Tasks@{Still\discretionary {-}{}{}Have\discretionary {-}{}{}Tasks}|hyperpage}{36}
+\indexentry{Still\discretionary {-}{}{}Have\discretionary {-}{}{}Tasks@{Still\discretionary {-}{}{}Have\discretionary {-}{}{}Tasks}!tasks.h@{tasks.\discretionary {-}{}{}h}|hyperpage}{36}
+\indexentry{tasks.\discretionary {-}{}{}h@{tasks.\discretionary {-}{}{}h}!Update\discretionary {-}{}{}Tasks@{Update\discretionary {-}{}{}Tasks}|hyperpage}{36}
+\indexentry{Update\discretionary {-}{}{}Tasks@{Update\discretionary {-}{}{}Tasks}!tasks.h@{tasks.\discretionary {-}{}{}h}|hyperpage}{36}
+\indexentry{time.\discretionary {-}{}{}c@{time.\discretionary {-}{}{}c}|hyperpage}{37}
+\indexentry{time.\discretionary {-}{}{}c@{time.\discretionary {-}{}{}c}!T\discretionary {-}{}{}I\discretionary {-}{}{}M\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}C@{T\discretionary {-}{}{}I\discretionary {-}{}{}M\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}C}|hyperpage}{38}
+\indexentry{T\discretionary {-}{}{}I\discretionary {-}{}{}M\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}C@{T\discretionary {-}{}{}I\discretionary {-}{}{}M\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}C}!time.c@{time.\discretionary {-}{}{}c}|hyperpage}{38}
+\indexentry{true@{true}!time.\-c@{time.\-c}|hyperpage}{38}
+\indexentry{time.\-c@{time.\-c}!true@{true}|hyperpage}{38}
+\indexentry{false@{false}!time.\-c@{time.\-c}|hyperpage}{38}
+\indexentry{time.\-c@{time.\-c}!false@{false}|hyperpage}{38}
+\indexentry{time.\discretionary {-}{}{}c@{time.\discretionary {-}{}{}c}!Display\discretionary {-}{}{}Stats@{Display\discretionary {-}{}{}Stats}|hyperpage}{39}
+\indexentry{Display\discretionary {-}{}{}Stats@{Display\discretionary {-}{}{}Stats}!time.c@{time.\discretionary {-}{}{}c}|hyperpage}{39}
+\indexentry{time.\discretionary {-}{}{}c@{time.\discretionary {-}{}{}c}!cpu\discretionary {-}{}{}\_\discretionary {-}{}{}end@{cpu\discretionary {-}{}{}\_\discretionary {-}{}{}end}|hyperpage}{39}
+\indexentry{cpu\discretionary {-}{}{}\_\discretionary {-}{}{}end@{cpu\discretionary {-}{}{}\_\discretionary {-}{}{}end}!time.c@{time.\discretionary {-}{}{}c}|hyperpage}{39}
+\indexentry{time.\discretionary {-}{}{}c@{time.\discretionary {-}{}{}c}!cpu\discretionary {-}{}{}\_\discretionary {-}{}{}time@{cpu\discretionary {-}{}{}\_\discretionary {-}{}{}time}|hyperpage}{39}
+\indexentry{cpu\discretionary {-}{}{}\_\discretionary {-}{}{}time@{cpu\discretionary {-}{}{}\_\discretionary {-}{}{}time}!time.c@{time.\discretionary {-}{}{}c}|hyperpage}{39}
+\indexentry{time.\discretionary {-}{}{}c@{time.\discretionary {-}{}{}c}!quantum@{quantum}|hyperpage}{40}
+\indexentry{quantum@{quantum}!time.c@{time.\discretionary {-}{}{}c}|hyperpage}{40}
+\indexentry{time.\discretionary {-}{}{}h@{time.\discretionary {-}{}{}h}|hyperpage}{40}
+\indexentry{time.\discretionary {-}{}{}h@{time.\discretionary {-}{}{}h}!Display\discretionary {-}{}{}Stats@{Display\discretionary {-}{}{}Stats}|hyperpage}{40}
+\indexentry{Display\discretionary {-}{}{}Stats@{Display\discretionary {-}{}{}Stats}!time.h@{time.\discretionary {-}{}{}h}|hyperpage}{40}

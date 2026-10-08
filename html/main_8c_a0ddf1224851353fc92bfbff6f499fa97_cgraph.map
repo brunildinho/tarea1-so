@@ -1,0 +1,12 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$time_8c.html#abdbf312dc4f12282fcdc885e30c35d8d" title="Displays the tasks statistics when simulation ends: &#160;. " alt="" coords="110,5,207,32"/>
+<area shape="rect" id="node3" href="$tasks_8c.html#a4900ca33f6181c8ca0640197cb9f0eca" title="Display the task list as read from file. " alt="" coords="107,56,210,83"/>
+<area shape="rect" id="node4" href="$tasks_8c.html#a23a2311e9f86bf69c6f5a693515b465b" title="Read tasks from file. File is formated as follow: Number of tasks arrival IO_NUMBER IO_TIME:IO_DURATI..." alt="" coords="114,107,203,133"/>
+<area shape="rect" id="node5" href="$sched_8c.html#ab59478d53f56baaa39228d19f22dccf4" title="Runs the tasks list in batch processing &#160;Each task is terminated before running the next one..." alt="" coords="119,157,199,184"/>
+<area shape="rect" id="node8" href="$sched_8c.html#ae3fa69f68cb26518aa65e34962cb64a2" title="Runs the tasks in time sharing. The function is called a each CPU cycle &#160;. " alt="" coords="104,208,213,235"/>
+<area shape="rect" id="node6" href="$tasks_8c.html#aa0b71ef4b783a1e2a716d6ded8bcc4bd" title="Checks for new tasks arrival. Tasks have a start time Put all the new tasks in ready state..." alt="" coords="267,157,394,184"/>
+<area shape="rect" id="node7" href="$sched_8c.html#a2f82e63c1372cfb979c12a137581a387" title="Choose next task in batch processing &#160;The next task in ready state in chosen. " alt="" coords="277,107,385,133"/>
+<area shape="rect" id="node9" href="$sched_8c.html#a865e8ede1588c6dc9a0bb62dbcf8f5ab" title="Chose next task to execute (shechdule) in time sharing. &#160;Uses a simple Round Robin policy without pre..." alt="" coords="262,208,399,235"/>
+<area shape="rect" id="node10" href="$tasks_8c.html#adc3a50b3837ce9320d4edf2db0e824d8" title="Update task statistics and IOs at each CPU cycle Update the elapsed time of blocked and ready tasks..." alt="" coords="281,259,381,285"/>
+<area shape="rect" id="node11" href="$tasks_8c.html#a9be8ef7ac5857262db914179e88e0a7b" title="StillHaveTasks" alt="" coords="275,309,386,336"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="RunBatch" name="RunBatch">
+<area shape="rect" id="node2" href="$sched_8c.html#a2f82e63c1372cfb979c12a137581a387" title="Choose next task in batch processing &#160;The next task in ready state in chosen. " alt="" coords="143,5,251,32"/>
+<area shape="rect" id="node3" href="$tasks_8c.html#aa0b71ef4b783a1e2a716d6ded8bcc4bd" title="Checks for new tasks arrival. Tasks have a start time Put all the new tasks in ready state..." alt="" coords="134,56,261,83"/>
+</map>

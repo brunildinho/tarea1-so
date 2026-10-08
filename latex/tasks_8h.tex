@@ -1,0 +1,416 @@
+\hypertarget{tasks_8h}{\section{tasks.\-h File Reference}
+\label{tasks_8h}\index{tasks.\-h@{tasks.\-h}}
+}
+This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{tasks_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structrun__s}{run\-\_\-s}
+\item 
+struct \hyperlink{structtask__s}{task\-\_\-s}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structrun__s}{run\-\_\-s} $\ast$ \hyperlink{tasks_8h_a6b451df7f4fd085ced3b05d94cdbbc2e}{run\-\_\-t}
+\item 
+typedef struct \hyperlink{structtask__s}{task\-\_\-s} $\ast$ \hyperlink{tasks_8h_a160cc545e04818fb9e5b120d405ad348}{task\-\_\-t}
+\begin{DoxyCompactList}\small\item\em The task list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{tasks_8h_ab0a58893190a8c184bde7c0cbdbe4959}{sched\-\_\-t} \{ \hyperlink{tasks_8h_ab0a58893190a8c184bde7c0cbdbe4959a3cf3a81cca9cf959dd5bb0d190e44458}{batch}, 
+\hyperlink{tasks_8h_ab0a58893190a8c184bde7c0cbdbe4959a13e3e48beeb47ceaf3c4873dc9e49094}{timeshare}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{tasks_8h_a23a2311e9f86bf69c6f5a693515b465b}{Read\-Tasks} (char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Read tasks from file. File is formated as follow\-: Number of tasks arrival I\-O\-\_\-\-N\-U\-M\-B\-E\-R I\-O\-\_\-\-T\-I\-M\-E\-:I\-O\-\_\-\-D\-U\-R\-A\-T\-I\-O\-N ... \end{DoxyCompactList}\item 
+void \hyperlink{tasks_8h_a4900ca33f6181c8ca0640197cb9f0eca}{Display\-Tasks} (\hyperlink{tasks_8h_a160cc545e04818fb9e5b120d405ad348}{task\-\_\-t} \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}, unsigned n)
+\begin{DoxyCompactList}\small\item\em Display the task list as read from file. \end{DoxyCompactList}\item 
+unsigned \hyperlink{tasks_8h_aa0b71ef4b783a1e2a716d6ded8bcc4bd}{Check\-Task\-Ready} (\hyperlink{tasks_8h_a160cc545e04818fb9e5b120d405ad348}{task\-\_\-t} \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}, unsigned time, unsigned n)
+\begin{DoxyCompactList}\small\item\em Checks for new tasks arrival. Tasks have a start time Put all the new tasks in ready state. \end{DoxyCompactList}\item 
+void \hyperlink{tasks_8h_adc3a50b3837ce9320d4edf2db0e824d8}{Update\-Tasks} (unsigned time, unsigned n)
+\begin{DoxyCompactList}\small\item\em Update task statistics and I\-Os at each C\-P\-U cycle Update the elapsed time of blocked and ready tasks, and simulate I\-Os duration. \end{DoxyCompactList}\item 
+unsigned \hyperlink{tasks_8h_a9be8ef7ac5857262db914179e88e0a7b}{Still\-Have\-Tasks} (\hyperlink{tasks_8h_a160cc545e04818fb9e5b120d405ad348}{task\-\_\-t} \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}, unsigned n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{tasks_8h_a6b451df7f4fd085ced3b05d94cdbbc2e}{\index{tasks.\-h@{tasks.\-h}!run\-\_\-t@{run\-\_\-t}}
+\index{run\-\_\-t@{run\-\_\-t}!tasks.h@{tasks.\-h}}
+\subsubsection[{run\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf run\-\_\-s}$\ast$ {\bf run\-\_\-t}}}\label{tasks_8h_a6b451df7f4fd085ced3b05d94cdbbc2e}
+
+
+Definition at line 9 of file tasks.\-h.
+
+\hypertarget{tasks_8h_a160cc545e04818fb9e5b120d405ad348}{\index{tasks.\-h@{tasks.\-h}!task\-\_\-t@{task\-\_\-t}}
+\index{task\-\_\-t@{task\-\_\-t}!tasks.h@{tasks.\-h}}
+\subsubsection[{task\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf task\-\_\-s}$\ast$ {\bf task\-\_\-t}}}\label{tasks_8h_a160cc545e04818fb9e5b120d405ad348}
+
+
+The task list. 
+
+
+
+Definition at line 23 of file tasks.\-h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{tasks_8h_ab0a58893190a8c184bde7c0cbdbe4959}{\index{tasks.\-h@{tasks.\-h}!sched\-\_\-t@{sched\-\_\-t}}
+\index{sched\-\_\-t@{sched\-\_\-t}!tasks.h@{tasks.\-h}}
+\subsubsection[{sched\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf sched\-\_\-t}}}\label{tasks_8h_ab0a58893190a8c184bde7c0cbdbe4959}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{batch@{batch}!tasks.\-h@{tasks.\-h}}\index{tasks.\-h@{tasks.\-h}!batch@{batch}}\item[{\em 
+\hypertarget{tasks_8h_ab0a58893190a8c184bde7c0cbdbe4959a3cf3a81cca9cf959dd5bb0d190e44458}{batch}\label{tasks_8h_ab0a58893190a8c184bde7c0cbdbe4959a3cf3a81cca9cf959dd5bb0d190e44458}
+}]\index{timeshare@{timeshare}!tasks.\-h@{tasks.\-h}}\index{tasks.\-h@{tasks.\-h}!timeshare@{timeshare}}\item[{\em 
+\hypertarget{tasks_8h_ab0a58893190a8c184bde7c0cbdbe4959a13e3e48beeb47ceaf3c4873dc9e49094}{timeshare}\label{tasks_8h_ab0a58893190a8c184bde7c0cbdbe4959a13e3e48beeb47ceaf3c4873dc9e49094}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 24 of file tasks.\-h.
+
+
+\begin{DoxyCode}
+24 \{\hyperlink{tasks_8h_ab0a58893190a8c184bde7c0cbdbe4959a3cf3a81cca9cf959dd5bb0d190e44458}{batch}, \hyperlink{tasks_8h_ab0a58893190a8c184bde7c0cbdbe4959a13e3e48beeb47ceaf3c4873dc9e49094}{timeshare}\} \hyperlink{tasks_8h_ab0a58893190a8c184bde7c0cbdbe4959}{sched\_t}; 
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\hypertarget{tasks_8h_aa0b71ef4b783a1e2a716d6ded8bcc4bd}{\index{tasks.\-h@{tasks.\-h}!Check\-Task\-Ready@{Check\-Task\-Ready}}
+\index{Check\-Task\-Ready@{Check\-Task\-Ready}!tasks.h@{tasks.\-h}}
+\subsubsection[{Check\-Task\-Ready}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Check\-Task\-Ready (
+\begin{DoxyParamCaption}
+\item[{{\bf task\-\_\-t}}]{tasks, }
+\item[{unsigned}]{time, }
+\item[{unsigned}]{n}
+\end{DoxyParamCaption}
+)}}\label{tasks_8h_aa0b71ef4b783a1e2a716d6ded8bcc4bd}
+
+
+Checks for new tasks arrival. Tasks have a start time Put all the new tasks in ready state. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em tasks} & The tasks list \\
+\hline
+\mbox{\tt in}  & {\em time} & The actual C\-P\-U time \\
+\hline
+\mbox{\tt in}  & {\em n} & The number of tasks \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 105 of file tasks.\-c.
+
+
+
+References task\-\_\-s\-::rtime, and task\-\_\-s\-::state.
+
+
+
+Referenced by Run\-Batch(), and Run\-Time\-Share().
+
+
+\begin{DoxyCode}
+106 \{
+107     \textcolor{keywordtype}{unsigned} i;
+108     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} rdy=0;
+109 
+110     \textcolor{keywordflow}{for} (i=0; i<n; i++)
+111     \{
+112         \textcolor{keywordflow}{if} (tasks[i].\hyperlink{structtask__s_ad69dba2449ece3f10eea4ed27af2e957}{start} == time)
+113         \{
+114             tasks[i].\hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state} = \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ac5f97202e60f558dad8ceb51418f55cf}{ready};
+115             tasks[i].\hyperlink{structtask__s_a159561283a0943e9a7f587ff1f413d99}{rtime} = 0;
+116         \}
+117         \textcolor{keywordflow}{if} ((tasks[i].\hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state} == \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ac5f97202e60f558dad8ceb51418f55cf}{ready}) || (tasks[i].\hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state} == 
+      \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9a8d3c3c9cc584db42a24e6d9ac6cc9673}{running})) rdy++;
+118     \}
+119     \textcolor{keywordflow}{return}(rdy);
+120 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tasks_8h_aa0b71ef4b783a1e2a716d6ded8bcc4bd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{tasks_8h_a4900ca33f6181c8ca0640197cb9f0eca}{\index{tasks.\-h@{tasks.\-h}!Display\-Tasks@{Display\-Tasks}}
+\index{Display\-Tasks@{Display\-Tasks}!tasks.h@{tasks.\-h}}
+\subsubsection[{Display\-Tasks}]{\setlength{\rightskip}{0pt plus 5cm}void Display\-Tasks (
+\begin{DoxyParamCaption}
+\item[{{\bf task\-\_\-t}}]{tasks, }
+\item[{unsigned}]{n}
+\end{DoxyParamCaption}
+)}}\label{tasks_8h_a4900ca33f6181c8ca0640197cb9f0eca}
+
+
+Display the task list as read from file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em tasks} & The tasks list \\
+\hline
+\mbox{\tt in}  & {\em n} & The number of tasks \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 78 of file tasks.\-c.
+
+
+
+References task\-\_\-s\-::nruns.
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+79 \{
+80     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i,j;
+81 
+82     \textcolor{keywordflow}{for}(i=0; i<n; i++)
+83     \{
+84         printf(\textcolor{stringliteral}{"Task %d: start at: %d, duration: %d\(\backslash\)n"}, i, tasks[i].\hyperlink{structtask__s_ad69dba2449ece3f10eea4ed27af2e957}{start}, tasks[i].
+      \hyperlink{structtask__s_a7621a6cb55465ce0be17f7e56c5aa908}{duration});
+85         printf(\textcolor{stringliteral}{"\(\backslash\)tIOs at: "});
+86         \textcolor{keywordflow}{for}(j=0; j<tasks[i].\hyperlink{structtask__s_a8906d14cfe47645b29a2333b4b92c550}{nruns}; j++)
+87         \{
+88             \textcolor{keywordflow}{if} (tasks[i].\hyperlink{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{run}[j].io == 0)
+89                 printf(\textcolor{stringliteral}{"%d:END"}, tasks[i].\hyperlink{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{run}[j].\hyperlink{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{run});
+90             \textcolor{keywordflow}{else}
+91                 printf(\textcolor{stringliteral}{"%d:%d  "}, tasks[i].\hyperlink{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{run}[j].\hyperlink{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{run}, tasks[i].run[j].io);
+92         \}
+93         printf(\textcolor{stringliteral}{"\(\backslash\)n"});
+94     \}
+95 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{tasks_8h_a4900ca33f6181c8ca0640197cb9f0eca_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{tasks_8h_a23a2311e9f86bf69c6f5a693515b465b}{\index{tasks.\-h@{tasks.\-h}!Read\-Tasks@{Read\-Tasks}}
+\index{Read\-Tasks@{Read\-Tasks}!tasks.h@{tasks.\-h}}
+\subsubsection[{Read\-Tasks}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Read\-Tasks (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{tasks_8h_a23a2311e9f86bf69c6f5a693515b465b}
+
+
+Read tasks from file. File is formated as follow\-: Number of tasks arrival I\-O\-\_\-\-N\-U\-M\-B\-E\-R I\-O\-\_\-\-T\-I\-M\-E\-:I\-O\-\_\-\-D\-U\-R\-A\-T\-I\-O\-N ... 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em filename} & File name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of tasks 
+\end{DoxyReturn}
+
+
+Definition at line 27 of file tasks.\-c.
+
+
+
+References task\-\_\-s\-::duration, task\-\_\-s\-::index, run\-\_\-s\-::io, task\-\_\-s\-::io\-\_\-time, task\-\_\-s\-::nruns, task\-\_\-s\-::rtime, run\-\_\-s\-::run, task\-\_\-s\-::run, task\-\_\-s\-::start, task\-\_\-s\-::state, and task\-\_\-s\-::utime.
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+28 \{
+29     FILE *file;
+30     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n;
+31     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i,j;
+32     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \hyperlink{structtask__s_ad69dba2449ece3f10eea4ed27af2e957}{start},\hyperlink{structtask__s_a7621a6cb55465ce0be17f7e56c5aa908}{duration},ios,sum;
+33     \hyperlink{structrun__s}{run\_t} \hyperlink{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{run};
+34     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} iot, iod;
+35 
+36     file = fopen(filename, \textcolor{stringliteral}{"r"});
+37     \textcolor{keywordflow}{if} (file == NULL)
+38     \{
+39         perror(\textcolor{stringliteral}{"Error lectura tareas"});
+40         exit(1);
+41     \}
+42     fscanf(file, \textcolor{stringliteral}{"%d\(\backslash\)n"},&n);
+43     \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks} = (\hyperlink{tasks_8h_a160cc545e04818fb9e5b120d405ad348}{task\_t})malloc(n*\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \hyperlink{structtask__s}{task\_s}));
+44     \textcolor{keywordflow}{for}(i=0;i<n;i++)
+45     \{
+46         sum = 0;
+47         fscanf(file,\textcolor{stringliteral}{"%d %d %d "}, &start, &duration, &ios);
+48         \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}[i].\hyperlink{structtask__s_ad69dba2449ece3f10eea4ed27af2e957}{start} = \hyperlink{structtask__s_ad69dba2449ece3f10eea4ed27af2e957}{start};
+49         \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}[i].\hyperlink{structtask__s_a7621a6cb55465ce0be17f7e56c5aa908}{duration} = \hyperlink{structtask__s_a7621a6cb55465ce0be17f7e56c5aa908}{duration};
+50         \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}[i].\hyperlink{structtask__s_af436f2616e78fd2466cc8b1c59875653}{utime} = 0;
+51         \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}[i].\hyperlink{structtask__s_a159561283a0943e9a7f587ff1f413d99}{rtime} = 0;
+52         \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}[i].\hyperlink{structtask__s_a8906d14cfe47645b29a2333b4b92c550}{nruns} = ios+1;
+53         \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}[i].\hyperlink{structtask__s_a0148e6caffa1e820ec07130799c22565}{index} = 0;
+54         \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}[i].\hyperlink{structtask__s_a35bfd62bed257847312e3da43efd6d9c}{io\_time} = 0;
+55         \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}[i].\hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state} = \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ae13643df062b2be44c6ad6207bac155f}{notready};
+56         run = (\hyperlink{tasks_8h_a6b451df7f4fd085ced3b05d94cdbbc2e}{run\_t})malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \hyperlink{structrun__s}{run\_s})*(ios+1));
+57         \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}[i].\hyperlink{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{run} = \hyperlink{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{run};
+58         \textcolor{keywordflow}{for}(j=0; j<ios; j++)
+59         \{
+60             fscanf(file, \textcolor{stringliteral}{"%d:%d"}, &iot, &iod);
+61             run[j].\hyperlink{structrun__s_a1ebaf0153e1c18453f998d4e12781319}{run} = iot;
+62             run[j].\hyperlink{structrun__s_a9141a59a809de1cb89dd0c1797bbffc0}{io} = iod;
+63             sum += iot;
+64         \}
+65         run[ios].\hyperlink{structrun__s_a1ebaf0153e1c18453f998d4e12781319}{run} = duration - sum;
+66         run[ios].\hyperlink{structrun__s_a9141a59a809de1cb89dd0c1797bbffc0}{io} = 0;
+67         fscanf(file, \textcolor{stringliteral}{"\(\backslash\)n"});
+68     \}
+69     fclose(file);
+70     \textcolor{keywordflow}{return}(n);
+71 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{tasks_8h_a23a2311e9f86bf69c6f5a693515b465b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{tasks_8h_a9be8ef7ac5857262db914179e88e0a7b}{\index{tasks.\-h@{tasks.\-h}!Still\-Have\-Tasks@{Still\-Have\-Tasks}}
+\index{Still\-Have\-Tasks@{Still\-Have\-Tasks}!tasks.h@{tasks.\-h}}
+\subsubsection[{Still\-Have\-Tasks}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Still\-Have\-Tasks (
+\begin{DoxyParamCaption}
+\item[{{\bf task\-\_\-t}}]{tasks, }
+\item[{unsigned}]{n}
+\end{DoxyParamCaption}
+)}}\label{tasks_8h_a9be8ef7ac5857262db914179e88e0a7b}
+
+
+Definition at line 130 of file tasks.\-c.
+
+
+
+Referenced by Run\-Time\-Share().
+
+
+\begin{DoxyCode}
+131 \{
+132     \textcolor{keywordtype}{unsigned} i;
+133     \textcolor{keywordtype}{unsigned} count=0;
+134 
+135     \textcolor{keywordflow}{for}(i=0; i<n; i++)
+136         \textcolor{keywordflow}{if} ((tasks[i].\hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state} == \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ae13643df062b2be44c6ad6207bac155f}{notready}) || (tasks[i].\hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state} == 
+      \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ab188ab2fbb2d1968e0d745b6e9c16a6f}{blocked})) count++;
+137     \textcolor{keywordflow}{return}(count);
+138 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tasks_8h_a9be8ef7ac5857262db914179e88e0a7b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{tasks_8h_adc3a50b3837ce9320d4edf2db0e824d8}{\index{tasks.\-h@{tasks.\-h}!Update\-Tasks@{Update\-Tasks}}
+\index{Update\-Tasks@{Update\-Tasks}!tasks.h@{tasks.\-h}}
+\subsubsection[{Update\-Tasks}]{\setlength{\rightskip}{0pt plus 5cm}void Update\-Tasks (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{time, }
+\item[{unsigned}]{n}
+\end{DoxyParamCaption}
+)}}\label{tasks_8h_adc3a50b3837ce9320d4edf2db0e824d8}
+
+
+Update task statistics and I\-Os at each C\-P\-U cycle Update the elapsed time of blocked and ready tasks, and simulate I\-Os duration. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em time} & The actual C\-P\-U time \\
+\hline
+\mbox{\tt in}  & {\em n} & The number of tasks \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 147 of file tasks.\-c.
+
+
+
+References task\-\_\-s\-::index, run\-\_\-s\-::io, task\-\_\-s\-::rtime, task\-\_\-s\-::run, and task\-\_\-s\-::state.
+
+
+
+Referenced by Run\-Time\-Share().
+
+
+\begin{DoxyCode}
+148 \{
+149     \textcolor{keywordtype}{unsigned} i;
+150 
+151     \textcolor{keywordflow}{for}(i=0; i<n; i++)
+152     \{
+153         \textcolor{keywordflow}{switch}( \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}[i].\hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state})
+154         \{
+155         \textcolor{keywordflow}{case} \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ac5f97202e60f558dad8ceb51418f55cf}{ready}:
+156             \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}[i].\hyperlink{structtask__s_a159561283a0943e9a7f587ff1f413d99}{rtime}++;
+157             \textcolor{keywordflow}{break};
+158         \textcolor{keywordflow}{case} \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ab188ab2fbb2d1968e0d745b6e9c16a6f}{blocked}:
+159             \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}[i].\hyperlink{structtask__s_a159561283a0943e9a7f587ff1f413d99}{rtime}++;
+160             \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}[i].\hyperlink{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{run}[\hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}[i].\hyperlink{structtask__s_a0148e6caffa1e820ec07130799c22565}{index}].\hyperlink{structrun__s_a9141a59a809de1cb89dd0c1797bbffc0}{io}--;
+161             \textcolor{keywordflow}{if} (\hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}[i].\hyperlink{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{run}[\hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}[i].\hyperlink{structtask__s_a0148e6caffa1e820ec07130799c22565}{index}].io == 0)
+162             \{
+163                 \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}[i].\hyperlink{structtask__s_a0148e6caffa1e820ec07130799c22565}{index}++;
+164                 \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}[i].\hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state} = \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ac5f97202e60f558dad8ceb51418f55cf}{ready};
+165             \}
+166             \textcolor{keywordflow}{break};
+167         \textcolor{keywordflow}{case} \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ae13643df062b2be44c6ad6207bac155f}{notready}:
+168         \textcolor{keywordflow}{case} \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9a8d3c3c9cc584db42a24e6d9ac6cc9673}{running}:
+169         \textcolor{keywordflow}{default}: \textcolor{keywordflow}{break};
+170         \}
+171     \}
+172 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{tasks_8h_adc3a50b3837ce9320d4edf2db0e824d8_icgraph}
+\end{center}
+\end{figure}
+
+

@@ -1,0 +1,8 @@
+2.1
+porquélaejecucióndelmismoejemploenmodoTimeSharing
+afectabastanteeltiempoderespuestadelatareaT1?
+
+Porque el modo Time Sharing reduce el tiempo ocioso del procesador, al requisarlo cuando una tarea debe hacer una I/O o cuando la tarea excede un quantum de tiempo. Si esto ocurre, el procesador es asignado a la siguiente tarea lista. Esto optimiza el uso del procesador y reduce los tiempos ociosos pues el procesador no debe esperar a que una tarea termine su I/O para volver a mantenerse ocupado.
+
+
+

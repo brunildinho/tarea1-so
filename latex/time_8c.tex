@@ -1,0 +1,178 @@
+\hypertarget{time_8c}{\section{time.\-c File Reference}
+\label{time_8c}\index{time.\-c@{time.\-c}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}tasks.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sched.\-h\char`\"{}}\\*
+Include dependency graph for time.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{time_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{time_8c_a59c9f23a58a43eba5b53da974d2eb0f6}{T\-I\-M\-E\-\_\-\-C}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{time_8c_adf764cbdea00d65edcd07bb9953ad2b7a08f175a5505a10b9ed657defeb050e4b}{true}, 
+\hyperlink{time_8c_adf764cbdea00d65edcd07bb9953ad2b7ae9de385ef6fe9bf3360d1038396b884c}{false}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{time_8c_abdbf312dc4f12282fcdc885e30c35d8d}{Display\-Stats} (\hyperlink{tasks_8h_a160cc545e04818fb9e5b120d405ad348}{task\-\_\-t} \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}, unsigned n, unsigned total, unsigned idle)
+\begin{DoxyCompactList}\small\item\em Displays the tasks statistics when simulation ends\-: \par
+. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \hyperlink{time_8c_a897fb87d9f6358f7218e60e2a0c93625}{cpu\-\_\-time} =0
+\begin{DoxyCompactList}\small\item\em The C\-P\-U virtual time. \end{DoxyCompactList}\item 
+unsigned \hyperlink{time_8c_a8debcb15087bba75ef635b1b4fe6cb25}{quantum}
+\begin{DoxyCompactList}\small\item\em The time slice used for time sharing. \end{DoxyCompactList}\item 
+enum  \{ ... \}  \hyperlink{time_8c_a0ff8880762660fffb1702c50f622af66}{cpu\-\_\-end} =\hyperlink{time_8c_adf764cbdea00d65edcd07bb9953ad2b7ae9de385ef6fe9bf3360d1038396b884c}{false}
+\begin{DoxyCompactList}\small\item\em Terminates simulation? \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{time_8c_a59c9f23a58a43eba5b53da974d2eb0f6}{\index{time.\-c@{time.\-c}!T\-I\-M\-E\-\_\-\-C@{T\-I\-M\-E\-\_\-\-C}}
+\index{T\-I\-M\-E\-\_\-\-C@{T\-I\-M\-E\-\_\-\-C}!time.c@{time.\-c}}
+\subsubsection[{T\-I\-M\-E\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-I\-M\-E\-\_\-\-C}}\label{time_8c_a59c9f23a58a43eba5b53da974d2eb0f6}
+
+
+Definition at line 3 of file time.\-c.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{time_8c_adf764cbdea00d65edcd07bb9953ad2b7}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{time_8c_adf764cbdea00d65edcd07bb9953ad2b7}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{true@{true}!time.\-c@{time.\-c}}\index{time.\-c@{time.\-c}!true@{true}}\item[{\em 
+\hypertarget{time_8c_adf764cbdea00d65edcd07bb9953ad2b7a08f175a5505a10b9ed657defeb050e4b}{true}\label{time_8c_adf764cbdea00d65edcd07bb9953ad2b7a08f175a5505a10b9ed657defeb050e4b}
+}]\index{false@{false}!time.\-c@{time.\-c}}\index{time.\-c@{time.\-c}!false@{false}}\item[{\em 
+\hypertarget{time_8c_adf764cbdea00d65edcd07bb9953ad2b7ae9de385ef6fe9bf3360d1038396b884c}{false}\label{time_8c_adf764cbdea00d65edcd07bb9953ad2b7ae9de385ef6fe9bf3360d1038396b884c}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 11 of file time.\-c.
+
+
+\begin{DoxyCode}
+11 \{\textcolor{keyword}{true}, \textcolor{keyword}{false}\} \hyperlink{time_8c_a0ff8880762660fffb1702c50f622af66}{cpu\_end}=\textcolor{keyword}{false}; 
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\hypertarget{time_8c_abdbf312dc4f12282fcdc885e30c35d8d}{\index{time.\-c@{time.\-c}!Display\-Stats@{Display\-Stats}}
+\index{Display\-Stats@{Display\-Stats}!time.c@{time.\-c}}
+\subsubsection[{Display\-Stats}]{\setlength{\rightskip}{0pt plus 5cm}void Display\-Stats (
+\begin{DoxyParamCaption}
+\item[{{\bf task\-\_\-t}}]{tasks, }
+\item[{unsigned}]{n, }
+\item[{unsigned}]{total, }
+\item[{unsigned}]{idle}
+\end{DoxyParamCaption}
+)}}\label{time_8c_abdbf312dc4f12282fcdc885e30c35d8d}
+
+
+Displays the tasks statistics when simulation ends\-: \par
+. 
+
+
+\begin{DoxyItemize}
+\item Total execution time
+\item C\-P\-U time
+\item Elapsed time (respond time) 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em tasks} & The tasks list \\
+\hline
+\mbox{\tt in}  & {\em n} & The number of tasks \\
+\hline
+\mbox{\tt in}  & {\em total} & The global execution time \\
+\hline
+\mbox{\tt in}  & {\em idle} & The C\-P\-U idle time \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Definition at line 23 of file time.\-c.
+
+
+
+References task\-\_\-s\-::rtime, and task\-\_\-s\-::utime.
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+24 \{
+25     \textcolor{keywordtype}{unsigned} i;
+26 
+27     printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)nTasks: %d, Total execution time: %d\(\backslash\)n"}, n, total);
+28     printf(\textcolor{stringliteral}{"Total CPU idle time: %d (%2.2f%%)\(\backslash\)n"}, idle, ((\textcolor{keywordtype}{float})idle/(\textcolor{keywordtype}{float})total)*100);
+29     \textcolor{keywordflow}{for}(i=0; i<n; i++)
+30     \{
+31         printf(\textcolor{stringliteral}{"Task %d, CPU time: %d, Elapsed: %d\(\backslash\)n"}, i, tasks[i].\hyperlink{structtask__s_af436f2616e78fd2466cc8b1c59875653}{utime}, tasks[i].
+      \hyperlink{structtask__s_a159561283a0943e9a7f587ff1f413d99}{rtime});
+32     \}
+33 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{time_8c_abdbf312dc4f12282fcdc885e30c35d8d_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{time_8c_a0ff8880762660fffb1702c50f622af66}{\index{time.\-c@{time.\-c}!cpu\-\_\-end@{cpu\-\_\-end}}
+\index{cpu\-\_\-end@{cpu\-\_\-end}!time.c@{time.\-c}}
+\subsubsection[{cpu\-\_\-end}]{\setlength{\rightskip}{0pt plus 5cm}enum \{ ... \}   cpu\-\_\-end}}\label{time_8c_a0ff8880762660fffb1702c50f622af66}
+
+
+Terminates simulation? 
+
+\hypertarget{time_8c_a897fb87d9f6358f7218e60e2a0c93625}{\index{time.\-c@{time.\-c}!cpu\-\_\-time@{cpu\-\_\-time}}
+\index{cpu\-\_\-time@{cpu\-\_\-time}!time.c@{time.\-c}}
+\subsubsection[{cpu\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}unsigned cpu\-\_\-time =0}}\label{time_8c_a897fb87d9f6358f7218e60e2a0c93625}
+
+
+The C\-P\-U virtual time. 
+
+
+
+Definition at line 9 of file time.\-c.
+
+\hypertarget{time_8c_a8debcb15087bba75ef635b1b4fe6cb25}{\index{time.\-c@{time.\-c}!quantum@{quantum}}
+\index{quantum@{quantum}!time.c@{time.\-c}}
+\subsubsection[{quantum}]{\setlength{\rightskip}{0pt plus 5cm}unsigned quantum}}\label{time_8c_a8debcb15087bba75ef635b1b4fe6cb25}
+
+
+The time slice used for time sharing. 
+
+
+
+Definition at line 10 of file time.\-c.
+
+
+
+Referenced by main().
+

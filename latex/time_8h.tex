@@ -1,0 +1,87 @@
+\hypertarget{time_8h}{\section{time.\-h File Reference}
+\label{time_8h}\index{time.\-h@{time.\-h}}
+}
+This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=126pt]{time_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{time_8h_abdbf312dc4f12282fcdc885e30c35d8d}{Display\-Stats} (\hyperlink{tasks_8h_a160cc545e04818fb9e5b120d405ad348}{task\-\_\-t} \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}, unsigned n, unsigned total, unsigned idle)
+\begin{DoxyCompactList}\small\item\em Displays the tasks statistics when simulation ends\-: \par
+. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{time_8h_abdbf312dc4f12282fcdc885e30c35d8d}{\index{time.\-h@{time.\-h}!Display\-Stats@{Display\-Stats}}
+\index{Display\-Stats@{Display\-Stats}!time.h@{time.\-h}}
+\subsubsection[{Display\-Stats}]{\setlength{\rightskip}{0pt plus 5cm}void Display\-Stats (
+\begin{DoxyParamCaption}
+\item[{{\bf task\-\_\-t}}]{tasks, }
+\item[{unsigned}]{n, }
+\item[{unsigned}]{total, }
+\item[{unsigned}]{idle}
+\end{DoxyParamCaption}
+)}}\label{time_8h_abdbf312dc4f12282fcdc885e30c35d8d}
+
+
+Displays the tasks statistics when simulation ends\-: \par
+. 
+
+
+\begin{DoxyItemize}
+\item Total execution time
+\item C\-P\-U time
+\item Elapsed time (respond time) 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em tasks} & The tasks list \\
+\hline
+\mbox{\tt in}  & {\em n} & The number of tasks \\
+\hline
+\mbox{\tt in}  & {\em total} & The global execution time \\
+\hline
+\mbox{\tt in}  & {\em idle} & The C\-P\-U idle time \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Definition at line 23 of file time.\-c.
+
+
+
+References task\-\_\-s\-::rtime, and task\-\_\-s\-::utime.
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+24 \{
+25     \textcolor{keywordtype}{unsigned} i;
+26 
+27     printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)nTasks: %d, Total execution time: %d\(\backslash\)n"}, n, total);
+28     printf(\textcolor{stringliteral}{"Total CPU idle time: %d (%2.2f%%)\(\backslash\)n"}, idle, ((\textcolor{keywordtype}{float})idle/(\textcolor{keywordtype}{float})total)*100);
+29     \textcolor{keywordflow}{for}(i=0; i<n; i++)
+30     \{
+31         printf(\textcolor{stringliteral}{"Task %d, CPU time: %d, Elapsed: %d\(\backslash\)n"}, i, tasks[i].\hyperlink{structtask__s_af436f2616e78fd2466cc8b1c59875653}{utime}, tasks[i].
+      \hyperlink{structtask__s_a159561283a0943e9a7f587ff1f413d99}{rtime});
+32     \}
+33 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{time_8h_abdbf312dc4f12282fcdc885e30c35d8d_icgraph}
+\end{center}
+\end{figure}
+
+

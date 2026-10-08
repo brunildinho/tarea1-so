@@ -1,0 +1,223 @@
+\hypertarget{structtask__s}{\section{task\-\_\-s Struct Reference}
+\label{structtask__s}\index{task\-\_\-s@{task\-\_\-s}}
+}
+
+
+{\ttfamily \#include $<$tasks.\-h$>$}
+
+
+
+Collaboration diagram for task\-\_\-s\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=126pt]{structtask__s__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+\hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ac5f97202e60f558dad8ceb51418f55cf}{ready}, 
+\hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ab188ab2fbb2d1968e0d745b6e9c16a6f}{blocked}, 
+\hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9acfe200aefdf28af1def22dd0aebf4f37}{terminated}, 
+\hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ae13643df062b2be44c6ad6207bac155f}{notready}, 
+\\*
+\hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9a8d3c3c9cc584db42a24e6d9ac6cc9673}{running}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \hyperlink{structtask__s_ad69dba2449ece3f10eea4ed27af2e957}{start}
+\begin{DoxyCompactList}\small\item\em The task arrival time. \end{DoxyCompactList}\item 
+unsigned \hyperlink{structtask__s_a7621a6cb55465ce0be17f7e56c5aa908}{duration}
+\begin{DoxyCompactList}\small\item\em The task duration (total) \end{DoxyCompactList}\item 
+int \hyperlink{structtask__s_af436f2616e78fd2466cc8b1c59875653}{utime}
+\begin{DoxyCompactList}\small\item\em The task user time. \end{DoxyCompactList}\item 
+int \hyperlink{structtask__s_a159561283a0943e9a7f587ff1f413d99}{rtime}
+\begin{DoxyCompactList}\small\item\em The task elapsed time (respond time) \end{DoxyCompactList}\item 
+\hyperlink{tasks_8h_a6b451df7f4fd085ced3b05d94cdbbc2e}{run\-\_\-t} \hyperlink{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{run}
+\begin{DoxyCompactList}\small\item\em Array of \hyperlink{structrun__s}{run\-\_\-s}. \end{DoxyCompactList}\item 
+unsigned \hyperlink{structtask__s_a8906d14cfe47645b29a2333b4b92c550}{nruns}
+\begin{DoxyCompactList}\small\item\em Number of struct \hyperlink{structrun__s}{run\-\_\-s} for the task. \end{DoxyCompactList}\item 
+unsigned \hyperlink{structtask__s_a0148e6caffa1e820ec07130799c22565}{index}
+\begin{DoxyCompactList}\small\item\em Index of the actual run. \end{DoxyCompactList}\item 
+unsigned \hyperlink{structtask__s_a35bfd62bed257847312e3da43efd6d9c}{io\-\_\-time}
+\begin{DoxyCompactList}\small\item\em I\-O duration counter. \end{DoxyCompactList}\item 
+enum task\-\_\-s\-:: \{ ... \}  \hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state}
+\begin{DoxyCompactList}\small\item\em Tasks state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 11 of file tasks.\-h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{ready@{ready}!task\-\_\-s@{task\-\_\-s}}\index{task\-\_\-s@{task\-\_\-s}!ready@{ready}}\item[{\em 
+\hypertarget{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ac5f97202e60f558dad8ceb51418f55cf}{ready}\label{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ac5f97202e60f558dad8ceb51418f55cf}
+}]\index{blocked@{blocked}!task\-\_\-s@{task\-\_\-s}}\index{task\-\_\-s@{task\-\_\-s}!blocked@{blocked}}\item[{\em 
+\hypertarget{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ab188ab2fbb2d1968e0d745b6e9c16a6f}{blocked}\label{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ab188ab2fbb2d1968e0d745b6e9c16a6f}
+}]\index{terminated@{terminated}!task\-\_\-s@{task\-\_\-s}}\index{task\-\_\-s@{task\-\_\-s}!terminated@{terminated}}\item[{\em 
+\hypertarget{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9acfe200aefdf28af1def22dd0aebf4f37}{terminated}\label{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9acfe200aefdf28af1def22dd0aebf4f37}
+}]\index{notready@{notready}!task\-\_\-s@{task\-\_\-s}}\index{task\-\_\-s@{task\-\_\-s}!notready@{notready}}\item[{\em 
+\hypertarget{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ae13643df062b2be44c6ad6207bac155f}{notready}\label{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ae13643df062b2be44c6ad6207bac155f}
+}]\index{running@{running}!task\-\_\-s@{task\-\_\-s}}\index{task\-\_\-s@{task\-\_\-s}!running@{running}}\item[{\em 
+\hypertarget{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9a8d3c3c9cc584db42a24e6d9ac6cc9673}{running}\label{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9a8d3c3c9cc584db42a24e6d9ac6cc9673}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 20 of file tasks.\-h.
+
+
+\begin{DoxyCode}
+20 \{\hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ac5f97202e60f558dad8ceb51418f55cf}{ready}, \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ab188ab2fbb2d1968e0d745b6e9c16a6f}{blocked}, \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9acfe200aefdf28af1def22dd0aebf4f37}{terminated}, \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ae13643df062b2be44c6ad6207bac155f}{notready}, \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9a8d3c3c9cc584db42a24e6d9ac6cc9673}{running}\} 
+      \hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state}; 
+\end{DoxyCode}
+
+
+\subsection{Field Documentation}
+\hypertarget{structtask__s_a7621a6cb55465ce0be17f7e56c5aa908}{\index{task\-\_\-s@{task\-\_\-s}!duration@{duration}}
+\index{duration@{duration}!task_s@{task\-\_\-s}}
+\subsubsection[{duration}]{\setlength{\rightskip}{0pt plus 5cm}unsigned task\-\_\-s\-::duration}}\label{structtask__s_a7621a6cb55465ce0be17f7e56c5aa908}
+
+
+The task duration (total) 
+
+
+
+Definition at line 13 of file tasks.\-h.
+
+
+
+Referenced by Read\-Tasks().
+
+\hypertarget{structtask__s_a0148e6caffa1e820ec07130799c22565}{\index{task\-\_\-s@{task\-\_\-s}!index@{index}}
+\index{index@{index}!task_s@{task\-\_\-s}}
+\subsubsection[{index}]{\setlength{\rightskip}{0pt plus 5cm}unsigned task\-\_\-s\-::index}}\label{structtask__s_a0148e6caffa1e820ec07130799c22565}
+
+
+Index of the actual run. 
+
+
+
+Definition at line 18 of file tasks.\-h.
+
+
+
+Referenced by Read\-Tasks(), Run\-Batch(), Run\-Time\-Share(), and Update\-Tasks().
+
+\hypertarget{structtask__s_a35bfd62bed257847312e3da43efd6d9c}{\index{task\-\_\-s@{task\-\_\-s}!io\-\_\-time@{io\-\_\-time}}
+\index{io\-\_\-time@{io\-\_\-time}!task_s@{task\-\_\-s}}
+\subsubsection[{io\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}unsigned task\-\_\-s\-::io\-\_\-time}}\label{structtask__s_a35bfd62bed257847312e3da43efd6d9c}
+
+
+I\-O duration counter. 
+
+
+
+Definition at line 19 of file tasks.\-h.
+
+
+
+Referenced by Read\-Tasks().
+
+\hypertarget{structtask__s_a8906d14cfe47645b29a2333b4b92c550}{\index{task\-\_\-s@{task\-\_\-s}!nruns@{nruns}}
+\index{nruns@{nruns}!task_s@{task\-\_\-s}}
+\subsubsection[{nruns}]{\setlength{\rightskip}{0pt plus 5cm}unsigned task\-\_\-s\-::nruns}}\label{structtask__s_a8906d14cfe47645b29a2333b4b92c550}
+
+
+Number of struct \hyperlink{structrun__s}{run\-\_\-s} for the task. 
+
+
+
+Definition at line 17 of file tasks.\-h.
+
+
+
+Referenced by Display\-Tasks(), and Read\-Tasks().
+
+\hypertarget{structtask__s_a159561283a0943e9a7f587ff1f413d99}{\index{task\-\_\-s@{task\-\_\-s}!rtime@{rtime}}
+\index{rtime@{rtime}!task_s@{task\-\_\-s}}
+\subsubsection[{rtime}]{\setlength{\rightskip}{0pt plus 5cm}int task\-\_\-s\-::rtime}}\label{structtask__s_a159561283a0943e9a7f587ff1f413d99}
+
+
+The task elapsed time (respond time) 
+
+
+
+Definition at line 15 of file tasks.\-h.
+
+
+
+Referenced by Check\-Task\-Ready(), Display\-Stats(), Read\-Tasks(), Run\-Batch(), Run\-Time\-Share(), and Update\-Tasks().
+
+\hypertarget{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{\index{task\-\_\-s@{task\-\_\-s}!run@{run}}
+\index{run@{run}!task_s@{task\-\_\-s}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}{\bf run\-\_\-t} task\-\_\-s\-::run}}\label{structtask__s_a1436b6ae08fcebe2915050bc5874b938}
+
+
+Array of \hyperlink{structrun__s}{run\-\_\-s}. 
+
+
+
+Definition at line 16 of file tasks.\-h.
+
+
+
+Referenced by Read\-Tasks(), Run\-Batch(), Run\-Time\-Share(), and Update\-Tasks().
+
+\hypertarget{structtask__s_ad69dba2449ece3f10eea4ed27af2e957}{\index{task\-\_\-s@{task\-\_\-s}!start@{start}}
+\index{start@{start}!task_s@{task\-\_\-s}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}unsigned task\-\_\-s\-::start}}\label{structtask__s_ad69dba2449ece3f10eea4ed27af2e957}
+
+
+The task arrival time. 
+
+
+
+Definition at line 12 of file tasks.\-h.
+
+
+
+Referenced by Read\-Tasks().
+
+\hypertarget{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{\index{task\-\_\-s@{task\-\_\-s}!state@{state}}
+\index{state@{state}!task_s@{task\-\_\-s}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}enum \{ ... \}   task\-\_\-s\-::state}}\label{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}
+
+
+Tasks state. 
+
+
+
+Referenced by Batch\-Resched(), Check\-Task\-Ready(), Read\-Tasks(), Run\-Batch(), Run\-Time\-Share(), Time\-Share\-Resched(), and Update\-Tasks().
+
+\hypertarget{structtask__s_af436f2616e78fd2466cc8b1c59875653}{\index{task\-\_\-s@{task\-\_\-s}!utime@{utime}}
+\index{utime@{utime}!task_s@{task\-\_\-s}}
+\subsubsection[{utime}]{\setlength{\rightskip}{0pt plus 5cm}int task\-\_\-s\-::utime}}\label{structtask__s_af436f2616e78fd2466cc8b1c59875653}
+
+
+The task user time. 
+
+
+
+Definition at line 14 of file tasks.\-h.
+
+
+
+Referenced by Display\-Stats(), Read\-Tasks(), Run\-Batch(), and Run\-Time\-Share().
+
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tasks_8h}{tasks.\-h}\end{DoxyCompactItemize}

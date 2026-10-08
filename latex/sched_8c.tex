@@ -1,0 +1,461 @@
+\hypertarget{sched_8c}{\section{sched.\-c File Reference}
+\label{sched_8c}\index{sched.\-c@{sched.\-c}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}tasks.\-h\char`\"{}}\\*
+Include dependency graph for sched.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{sched_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{sched_8c_a2f82e63c1372cfb979c12a137581a387}{Batch\-Resched} (\hyperlink{tasks_8h_a160cc545e04818fb9e5b120d405ad348}{task\-\_\-t} \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}, int current\-\_\-task, unsigned n)
+\begin{DoxyCompactList}\small\item\em Choose next task in batch processing \par
+The next task in ready state in chosen. \end{DoxyCompactList}\item 
+unsigned \hyperlink{sched_8c_ab59478d53f56baaa39228d19f22dccf4}{Run\-Batch} (\hyperlink{tasks_8h_a160cc545e04818fb9e5b120d405ad348}{task\-\_\-t} \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}, int n, unsigned $\ast$idle)
+\begin{DoxyCompactList}\small\item\em Runs the tasks list in batch processing \par
+Each task is terminated before running the next one. There is no preemption. \par
+This function is executed at each C\-P\-U cycle. \end{DoxyCompactList}\item 
+int \hyperlink{sched_8c_a865e8ede1588c6dc9a0bb62dbcf8f5ab}{Time\-Share\-Resched} (\hyperlink{tasks_8h_a160cc545e04818fb9e5b120d405ad348}{task\-\_\-t} \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}, int current\-\_\-task, unsigned n)
+\begin{DoxyCompactList}\small\item\em Chose next task to execute (shechdule) in time sharing. \par
+Uses a simple Round Robin policy without preemption, and without priorities. The function is called at end of quantum or at I\-O. \end{DoxyCompactList}\item 
+unsigned \hyperlink{sched_8c_ae3fa69f68cb26518aa65e34962cb64a2}{Run\-Time\-Share} (\hyperlink{tasks_8h_a160cc545e04818fb9e5b120d405ad348}{task\-\_\-t} \hyperlink{tasks_8c_ad3af5d835e26282dfd09b0c77f1407e6}{tasks}, unsigned \hyperlink{time_8c_a8debcb15087bba75ef635b1b4fe6cb25}{quantum}, unsigned n, unsigned $\ast$idle)
+\begin{DoxyCompactList}\small\item\em Runs the tasks in time sharing.\par
+The function is called a each C\-P\-U cycle \par
+. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{sched_8c_a2f82e63c1372cfb979c12a137581a387}{\index{sched.\-c@{sched.\-c}!Batch\-Resched@{Batch\-Resched}}
+\index{Batch\-Resched@{Batch\-Resched}!sched.c@{sched.\-c}}
+\subsubsection[{Batch\-Resched}]{\setlength{\rightskip}{0pt plus 5cm}int Batch\-Resched (
+\begin{DoxyParamCaption}
+\item[{{\bf task\-\_\-t}}]{tasks, }
+\item[{int}]{current\-\_\-task, }
+\item[{unsigned}]{n}
+\end{DoxyParamCaption}
+)}}\label{sched_8c_a2f82e63c1372cfb979c12a137581a387}
+
+
+Choose next task in batch processing \par
+The next task in ready state in chosen. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em tasks} & The tasks list \\
+\hline
+\mbox{\tt in}  & {\em current\-\_\-task} & The current\-\_\-task index \\
+\hline
+\mbox{\tt in}  & {\em n} & The number of tasks \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file sched.\-c.
+
+
+
+References task\-\_\-s\-::state.
+
+
+
+Referenced by Run\-Batch().
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{keywordtype}{unsigned} next;
+21     \textcolor{keywordtype}{unsigned} count=0;
+22 
+23     \textcolor{keywordflow}{for}(next=0; next<n; next++)
+24         \textcolor{keywordflow}{if} (tasks[next].\hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state} == \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ac5f97202e60f558dad8ceb51418f55cf}{ready}) \textcolor{comment}{// This is the new task}
+25         \{
+26             tasks[next].\hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state} = \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9a8d3c3c9cc584db42a24e6d9ac6cc9673}{running};
+27             \textcolor{keywordflow}{return}(next);
+28         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tasks[next].\hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state} == \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ae13643df062b2be44c6ad6207bac155f}{notready}) count++;
+29     \textcolor{keywordflow}{if} (count != 0) \textcolor{keywordflow}{return}(-2); \textcolor{comment}{// Some task are not yet ready}
+30         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return}(-1); \textcolor{comment}{// There is no more task}
+31 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{sched_8c_a2f82e63c1372cfb979c12a137581a387_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{sched_8c_ab59478d53f56baaa39228d19f22dccf4}{\index{sched.\-c@{sched.\-c}!Run\-Batch@{Run\-Batch}}
+\index{Run\-Batch@{Run\-Batch}!sched.c@{sched.\-c}}
+\subsubsection[{Run\-Batch}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Run\-Batch (
+\begin{DoxyParamCaption}
+\item[{{\bf task\-\_\-t}}]{tasks, }
+\item[{int}]{n, }
+\item[{unsigned $\ast$}]{idle}
+\end{DoxyParamCaption}
+)}}\label{sched_8c_ab59478d53f56baaa39228d19f22dccf4}
+
+
+Runs the tasks list in batch processing \par
+Each task is terminated before running the next one. There is no preemption. \par
+This function is executed at each C\-P\-U cycle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em tasks} & The tasks list \\
+\hline
+\mbox{\tt in}  & {\em current\-\_\-task} & The task being executed \\
+\hline
+\mbox{\tt in}  & {\em idle} & The C\-P\-U idle time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The total running time 
+\end{DoxyReturn}
+
+
+Definition at line 43 of file sched.\-c.
+
+
+
+References Batch\-Resched(), Check\-Task\-Ready(), task\-\_\-s\-::index, run\-\_\-s\-::io, task\-\_\-s\-::rtime, run\-\_\-s\-::run, task\-\_\-s\-::run, task\-\_\-s\-::state, and task\-\_\-s\-::utime.
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+44 \{
+45     \textcolor{keywordtype}{unsigned} time;
+46     \textcolor{keywordtype}{unsigned} i;
+47     \textcolor{keywordtype}{unsigned} current\_task=0;
+48     \textcolor{keywordtype}{unsigned} rdy=0;
+49     \textcolor{keywordtype}{unsigned} \hyperlink{structtask__s_a0148e6caffa1e820ec07130799c22565}{index};
+50 
+51     time=0; \textcolor{comment}{// starting time;}
+52     *idle = 0; \textcolor{comment}{// cpu idel time}
+53 
+54 
+55     \textcolor{keywordflow}{while}(1)
+56     \{
+57         rdy = \hyperlink{tasks_8c_aa0b71ef4b783a1e2a716d6ded8bcc4bd}{CheckTaskReady}(tasks, time, n);
+58         \textcolor{keywordflow}{if} (rdy > 0)
+59         \{
+60             \textcolor{comment}{// Run the next task}
+61             current\_task = \hyperlink{sched_8c_a2f82e63c1372cfb979c12a137581a387}{BatchResched}(tasks, current\_task, n);
+62             index = tasks[current\_task].\hyperlink{structtask__s_a0148e6caffa1e820ec07130799c22565}{index};
+63             \textcolor{keywordflow}{while}( index < tasks[current\_task].\hyperlink{structtask__s_a8906d14cfe47645b29a2333b4b92c550}{nruns})
+64             \{
+65                 \textcolor{keywordflow}{switch} (tasks[current\_task].\hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state})
+66                 \{
+67                 \textcolor{keywordflow}{case} \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9a8d3c3c9cc584db42a24e6d9ac6cc9673}{running}:
+68                     printf(\textcolor{stringliteral}{"%d"},current\_task);
+69                     tasks[current\_task].\hyperlink{structtask__s_af436f2616e78fd2466cc8b1c59875653}{utime}++;
+70                     tasks[current\_task].\hyperlink{structtask__s_a159561283a0943e9a7f587ff1f413d99}{rtime}++;
+71                     tasks[current\_task].\hyperlink{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{run}[\hyperlink{structtask__s_a0148e6caffa1e820ec07130799c22565}{index}].\hyperlink{structrun__s_a1ebaf0153e1c18453f998d4e12781319}{run}--;
+72                     \textcolor{comment}{// updates every other task in ready state}
+73                     \textcolor{keywordflow}{for}(i=0; i<n; i++)
+74                         \textcolor{keywordflow}{if} (i != current\_task)
+75                             \textcolor{keywordflow}{if}( tasks[i].state == \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ac5f97202e60f558dad8ceb51418f55cf}{ready}) tasks[i].\hyperlink{structtask__s_a159561283a0943e9a7f587ff1f413d99}{rtime}++;
+76                     \textcolor{keywordflow}{if} (tasks[current\_task].\hyperlink{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{run}[index].\hyperlink{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{run} == 0)
+77                     \{
+78                         \textcolor{keywordflow}{if} (tasks[current\_task].\hyperlink{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{run}[index].io != 0)
+79                         \{
+80                             \textcolor{comment}{// task start I/O}
+81                             tasks[current\_task].\hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state} = \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ab188ab2fbb2d1968e0d745b6e9c16a6f}{blocked};
+82                             printf(\textcolor{stringliteral}{"#"});
+83                             fflush(stdout);
+84                         \} \textcolor{keywordflow}{else}
+85                             index++;
+86                     \}
+87                     \textcolor{keywordflow}{break};
+88                 \textcolor{keywordflow}{case} \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ab188ab2fbb2d1968e0d745b6e9c16a6f}{blocked}:
+89                     printf(\textcolor{stringliteral}{"X"});
+90                     (*idle)++;
+91                     tasks[current\_task].\hyperlink{structtask__s_a159561283a0943e9a7f587ff1f413d99}{rtime}++;
+92                     \textcolor{comment}{// updates every other task in ready state}
+93                     \textcolor{keywordflow}{for} (i = 0; i < n; i++)
+94                         \textcolor{keywordflow}{if} (i != current\_task)
+95                             \textcolor{keywordflow}{if} (tasks[i].state == \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ac5f97202e60f558dad8ceb51418f55cf}{ready})
+96                                 tasks[i].\hyperlink{structtask__s_a159561283a0943e9a7f587ff1f413d99}{rtime}++;
+97                     tasks[current\_task].\hyperlink{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{run}[\hyperlink{structtask__s_a0148e6caffa1e820ec07130799c22565}{index}].\hyperlink{structrun__s_a9141a59a809de1cb89dd0c1797bbffc0}{io}--;
+98                     \textcolor{keywordflow}{if} (tasks[current\_task].\hyperlink{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{run}[index].io == 0)
+99                     \{
+100                         \textcolor{comment}{// I/O is finished}
+101                         tasks[current\_task].\hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state} = \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9a8d3c3c9cc584db42a24e6d9ac6cc9673}{running};
+102                         \textcolor{comment}{// next run}
+103                         index++;
+104                     \}
+105                     \textcolor{keywordflow}{break};
+106                 \textcolor{keywordflow}{default}: \textcolor{keywordflow}{break};
+107                 \}
+108                 time++;
+109                 rdy = \hyperlink{tasks_8c_aa0b71ef4b783a1e2a716d6ded8bcc4bd}{CheckTaskReady}(tasks, time, n);
+110             \}
+111             \textcolor{comment}{// Task terminated;}
+112             tasks[current\_task].\hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state} = \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9acfe200aefdf28af1def22dd0aebf4f37}{terminated};
+113             printf(\textcolor{stringliteral}{"*/"});fflush(stdout);
+114         \}
+115         \textcolor{keywordflow}{else}
+116         \{
+117             \textcolor{comment}{// There is no task ready}
+118             \textcolor{comment}{// Check if there are still task to run...}
+119             current\_task = \hyperlink{sched_8c_a2f82e63c1372cfb979c12a137581a387}{BatchResched}(tasks, current\_task, n);
+120             \textcolor{keywordflow}{if} (current\_task == -1) \textcolor{keywordflow}{return}(time);
+121             \textcolor{keywordflow}{else} time++;
+122         \}
+123 
+124     \}
+125     \textcolor{keywordflow}{return}(0);
+126 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{sched_8c_ab59478d53f56baaa39228d19f22dccf4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{sched_8c_ab59478d53f56baaa39228d19f22dccf4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{sched_8c_ae3fa69f68cb26518aa65e34962cb64a2}{\index{sched.\-c@{sched.\-c}!Run\-Time\-Share@{Run\-Time\-Share}}
+\index{Run\-Time\-Share@{Run\-Time\-Share}!sched.c@{sched.\-c}}
+\subsubsection[{Run\-Time\-Share}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Run\-Time\-Share (
+\begin{DoxyParamCaption}
+\item[{{\bf task\-\_\-t}}]{tasks, }
+\item[{unsigned}]{quantum, }
+\item[{unsigned}]{n, }
+\item[{unsigned $\ast$}]{idle}
+\end{DoxyParamCaption}
+)}}\label{sched_8c_ae3fa69f68cb26518aa65e34962cb64a2}
+
+
+Runs the tasks in time sharing.\par
+The function is called a each C\-P\-U cycle \par
+. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em tasks} & The tasks list \\
+\hline
+\mbox{\tt in}  & {\em current\-\_\-task} & The current running task \\
+\hline
+\mbox{\tt in}  & {\em quantum} & The time slice \\
+\hline
+\mbox{\tt in}  & {\em idle} & The C\-P\-U idle time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 If we need to re-\/schedule (the task ends quantum, I\-O, or ended) 
+
+0 If the tasks still has the C\-P\-U 
+\end{DoxyReturn}
+
+
+Definition at line 175 of file sched.\-c.
+
+
+
+References Check\-Task\-Ready(), task\-\_\-s\-::index, task\-\_\-s\-::rtime, run\-\_\-s\-::run, task\-\_\-s\-::run, task\-\_\-s\-::state, Still\-Have\-Tasks(), Time\-Share\-Resched(), Update\-Tasks(), and task\-\_\-s\-::utime.
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+176 \{
+177     \textcolor{keywordtype}{unsigned} time;
+178     \textcolor{keywordtype}{unsigned} rdy;
+179     \textcolor{keywordtype}{int} current\_task=-1;
+180     \textcolor{keywordtype}{unsigned} used\_quantum;
+181     \textcolor{keywordtype}{unsigned} \hyperlink{structtask__s_a0148e6caffa1e820ec07130799c22565}{index};
+182 
+183     \textcolor{comment}{// Starts time}
+184     time = 0;
+185     *idle = 0;
+186 
+187     \textcolor{keywordflow}{while}(1)
+188     \{
+189         rdy = \hyperlink{tasks_8c_aa0b71ef4b783a1e2a716d6ded8bcc4bd}{CheckTaskReady}(tasks, time, n);
+190         \textcolor{keywordflow}{if} (rdy > 0)
+191         \{
+192             \textcolor{comment}{// Run the next task}
+193             current\_task = \hyperlink{sched_8c_a865e8ede1588c6dc9a0bb62dbcf8f5ab}{TimeShareResched}(tasks, current\_task, n);
+194             used\_quantum = 0;
+195             index = tasks[current\_task].\hyperlink{structtask__s_a0148e6caffa1e820ec07130799c22565}{index};
+196             \textcolor{comment}{// Run task for at most one quantum}
+197             \textcolor{keywordflow}{while}(used\_quantum < \hyperlink{main_8c_a8debcb15087bba75ef635b1b4fe6cb25}{quantum})
+198             \{
+199                 printf(\textcolor{stringliteral}{"%d"}, current\_task);fflush(stdout);
+200                 tasks[current\_task].\hyperlink{structtask__s_af436f2616e78fd2466cc8b1c59875653}{utime}++;
+201                 tasks[current\_task].\hyperlink{structtask__s_a159561283a0943e9a7f587ff1f413d99}{rtime}++;
+202                 tasks[current\_task].\hyperlink{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{run}[\hyperlink{structtask__s_a0148e6caffa1e820ec07130799c22565}{index}].\hyperlink{structrun__s_a1ebaf0153e1c18453f998d4e12781319}{run}--;
+203                 \textcolor{comment}{// updates every other task in ready or blocked states}
+204                 \hyperlink{tasks_8c_adc3a50b3837ce9320d4edf2db0e824d8}{UpdateTasks}(time, n);
+205                 \textcolor{comment}{// Check if task reached I/O}
+206                 \textcolor{keywordflow}{if} (tasks[current\_task].\hyperlink{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{run}[index].\hyperlink{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{run} == 0)
+207                 \{
+208                     \textcolor{keywordflow}{if} (tasks[current\_task].\hyperlink{structtask__s_a1436b6ae08fcebe2915050bc5874b938}{run}[index].io != 0)
+209                     \{
+210                         \textcolor{comment}{// task start I/O}
+211                         printf(\textcolor{stringliteral}{"#"});fflush(stdout);
+212                         tasks[current\_task].\hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state} = \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ab188ab2fbb2d1968e0d745b6e9c16a6f}{blocked};
+213                         time++;
+214                         \textcolor{keywordflow}{break}; \textcolor{comment}{// exit from while and reschedule tasks (round robin)}
+215                     \}
+216                     \textcolor{keywordflow}{else}
+217                     \{
+218                         \textcolor{comment}{// task ends and reschedule}
+219                         printf(\textcolor{stringliteral}{"*"});fflush(stdout);
+220                         tasks[current\_task].\hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state} = \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9acfe200aefdf28af1def22dd0aebf4f37}{terminated};
+221                         time++;
+222                         \textcolor{keywordflow}{break};
+223                     \}
+224                 \}
+225                 used\_quantum++;
+226                 time++;
+227                 rdy = \hyperlink{tasks_8c_aa0b71ef4b783a1e2a716d6ded8bcc4bd}{CheckTaskReady}(tasks, time, n);
+228             \}
+229             \textcolor{comment}{// task has used quantum or is in I/O}
+230             printf(\textcolor{stringliteral}{"/"});fflush(stdout);
+231             \textcolor{keywordflow}{if} (tasks[current\_task].\hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state} == \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9a8d3c3c9cc584db42a24e6d9ac6cc9673}{running}) tasks[current\_task].
+      \hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state} = \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ac5f97202e60f558dad8ceb51418f55cf}{ready};
+232         \}
+233         \textcolor{keywordflow}{else}
+234         \{
+235             \textcolor{comment}{// Wait for tasks to be ready}
+236             current\_task = -1;
+237             \textcolor{keywordflow}{if} (!\hyperlink{tasks_8c_a9be8ef7ac5857262db914179e88e0a7b}{StillHaveTasks}(tasks,n)) \textcolor{keywordflow}{return}(time);
+238             (*idle)++;
+239             printf(\textcolor{stringliteral}{"X"}); fflush(stdout);
+240             \hyperlink{tasks_8c_adc3a50b3837ce9320d4edf2db0e824d8}{UpdateTasks}(time, n);
+241             time++;
+242             rdy = \hyperlink{tasks_8c_aa0b71ef4b783a1e2a716d6ded8bcc4bd}{CheckTaskReady}(tasks, time, n);
+243         \}
+244     \}
+245     \textcolor{keywordflow}{return}(0);
+246 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{sched_8c_ae3fa69f68cb26518aa65e34962cb64a2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{sched_8c_ae3fa69f68cb26518aa65e34962cb64a2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{sched_8c_a865e8ede1588c6dc9a0bb62dbcf8f5ab}{\index{sched.\-c@{sched.\-c}!Time\-Share\-Resched@{Time\-Share\-Resched}}
+\index{Time\-Share\-Resched@{Time\-Share\-Resched}!sched.c@{sched.\-c}}
+\subsubsection[{Time\-Share\-Resched}]{\setlength{\rightskip}{0pt plus 5cm}int Time\-Share\-Resched (
+\begin{DoxyParamCaption}
+\item[{{\bf task\-\_\-t}}]{tasks, }
+\item[{int}]{current\-\_\-task, }
+\item[{unsigned}]{n}
+\end{DoxyParamCaption}
+)}}\label{sched_8c_a865e8ede1588c6dc9a0bb62dbcf8f5ab}
+
+
+Chose next task to execute (shechdule) in time sharing. \par
+Uses a simple Round Robin policy without preemption, and without priorities. The function is called at end of quantum or at I\-O. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em tasks} & The tasks list \\
+\hline
+\mbox{\tt in}  & {\em current\-\_\-task} & The current task in execution \\
+\hline
+\mbox{\tt in}  & {\em n} & The number of tasks \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The next task to run 
+
+-\/1 If there is no more tasks 
+
+-\/2 If there are tasks in state notready or blocked and none is available to run 
+\end{DoxyReturn}
+
+
+Definition at line 140 of file sched.\-c.
+
+
+
+References task\-\_\-s\-::state.
+
+
+
+Referenced by Run\-Time\-Share().
+
+
+\begin{DoxyCode}
+141 \{
+142     \textcolor{keywordtype}{unsigned} count=0;
+143     \textcolor{keywordtype}{unsigned} wait=0;
+144     \textcolor{keywordtype}{int} \hyperlink{structtask__s_a0148e6caffa1e820ec07130799c22565}{index};
+145 
+146     \textcolor{keywordflow}{if} (current\_task == -2) index = -1;
+147         \textcolor{keywordflow}{else} index = current\_task;
+148 
+149     \textcolor{keywordflow}{while}( count<n )
+150     \{
+151         index = (index+1)%n;
+152         count++;
+153         \textcolor{keywordflow}{if} (tasks[index].\hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state} == \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ac5f97202e60f558dad8ceb51418f55cf}{ready})
+154         \{
+155             tasks[\hyperlink{structtask__s_a0148e6caffa1e820ec07130799c22565}{index}].\hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state} = \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9a8d3c3c9cc584db42a24e6d9ac6cc9673}{running};
+156             \textcolor{keywordflow}{return}(index);
+157         \}
+158         \textcolor{keywordflow}{if} ((tasks[index].\hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state} == \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ab188ab2fbb2d1968e0d745b6e9c16a6f}{blocked}) || (tasks[\hyperlink{structtask__s_a0148e6caffa1e820ec07130799c22565}{index}].
+      \hyperlink{structtask__s_ae7a9cf3d567939ba2c9866cdfba022d8}{state} == \hyperlink{structtask__s_aa3df0abff146e014f8a8097a8d77f2a9ae13643df062b2be44c6ad6207bac155f}{notready})) wait++;
+159     \}
+160     \textcolor{keywordflow}{if} (wait != 0) \textcolor{keywordflow}{return}(-2);
+161         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return}(-1);
+162 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sched_8c_a865e8ede1588c6dc9a0bb62dbcf8f5ab_icgraph}
+\end{center}
+\end{figure}
+
+

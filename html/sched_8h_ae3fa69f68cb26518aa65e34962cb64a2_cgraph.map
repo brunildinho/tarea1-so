@@ -1,0 +1,6 @@
+<map id="RunTimeShare" name="RunTimeShare">
+<area shape="rect" id="node2" href="$tasks_8c.html#aa0b71ef4b783a1e2a716d6ded8bcc4bd" title="Checks for new tasks arrival. Tasks have a start time Put all the new tasks in ready state..." alt="" coords="169,5,295,32"/>
+<area shape="rect" id="node3" href="$tasks_8c.html#a9be8ef7ac5857262db914179e88e0a7b" title="StillHaveTasks" alt="" coords="177,56,287,83"/>
+<area shape="rect" id="node4" href="$sched_8c.html#a865e8ede1588c6dc9a0bb62dbcf8f5ab" title="Chose next task to execute (shechdule) in time sharing. &#160;Uses a simple Round Robin policy without pre..." alt="" coords="163,107,301,133"/>
+<area shape="rect" id="node5" href="$tasks_8c.html#adc3a50b3837ce9320d4edf2db0e824d8" title="Update task statistics and IOs at each CPU cycle Update the elapsed time of blocked and ready tasks..." alt="" coords="182,157,282,184"/>
+</map>
